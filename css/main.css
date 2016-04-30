@@ -1,0 +1,293 @@
+/*00-helper
+-------------*/
+/* ---------------------------------------------------------------------
+Fonts
+--------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------
+Colors
+--------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------
+Size
+--------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------
+ RESET CSS (thanks Eric Meyer)
+--------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+/* Always show a vertical scrollbar, even when there is no scrolling */
+html {
+  overflow-y: scroll;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* ---------------------------------------------------------------------
+ HTML5 Element Reset
+--------------------------------------------------------------------- */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+audio, canvas, video, progress, picture {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------
+ Form Reset Styles
+--------------------------------------------------------------------- */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*01-vendor
+-------------*/
+/*02-base
+-------------*/
+/* ---------------------------------------------------------------------
+ Base
+--------------------------------------------------------------------- */
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 13px;
+  background-color: #00527a;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------
+ Site
+--------------------------------------------------------------------- */
+.site {
+  width: 1000px;
+  margin: auto;
+}
+
+.site-hd {
+  padding: 20px;
+}
+
+.site-nav {
+  background-color: #cccccc;
+}
+
+.site-bd {
+  padding: 18px;
+  background-color: #ffffff;
+}
+
+.site-ft {
+  padding: 18px;
+  background-color: #2c2c2c;
+}
+
+/* ---------------------------------------------------------------------
+ hList
+--------------------------------------------------------------------- */
+.hList {
+  font-size: 0;
+}
+
+.hList > * {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+}
+
+.hList > * + * {
+  margin-left: 24px;
+}
+
+.hList > * + *:before {
+  content: "";
+  height: 14px;
+  width: 1px;
+  margin-top: -7px;
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  background-color: #ffffff;
+}
+
+/* ---------------------------------------------------------------------
+ Button
+--------------------------------------------------------------------- */
+/*03-layout
+-------------*/
+/* ---------------------------------------------------------------------
+Grid
+--------------------------------------------------------------------- */
+.container {
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.row:before,
+.row:after {
+  width: 100%;
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+/* 10 column */
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 .5%;
+}
+
+.one {
+  width: 10%;
+}
+
+.two {
+  width: 20%;
+}
+
+.three {
+  width: 30%;
+}
+
+.four {
+  width: 40%;
+}
+
+.five {
+  width: 50%;
+}
+
+.six {
+  width: 60%;
+}
+
+.seven {
+  width: 70%;
+}
+
+.eight {
+  width: 80%;
+}
+
+.nine {
+  width: 90%;
+}
+
+.ten {
+  width: 100%;
+}
+
+/*04-modules
+-------------*/
+/* ---------------------------------------------------------------------
+ Footer
+--------------------------------------------------------------------- */
+.footer {
+  color: #ffffff;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------------------
+ Carousel
+--------------------------------------------------------------------- */
+.carousel-item_isInactive {
+  position: absolute;
+  left: -9999px;
+  line-height: 0;
+}
+
+.carousel-item_isActive {
+  position: static;
+  left: 0;
+}
+
+/*04-states
+-------------*/

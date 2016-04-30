@@ -1,0 +1,60 @@
+/* ---------------------------------------------------------------------
+Grid
+--------------------------------------------------------------------- */
+//target/context
+.container {
+    max-width: $content-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+// Eric Meyer's Clearfix
+.row:before,
+.row:after {
+    width: 100%;
+    content: " "; 
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+
+/* 10 column */
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 .5%;
+}
+.one { 
+    width: 10% ;
+}
+.two {
+    width: 20%;
+}
+.three {
+    width: 30%;
+}
+.four { 
+    width: 40% ;
+}
+.five {
+    width: 50%;
+}
+.six {
+    width: 60%;
+}
+.seven {
+    width: 70%;
+}
+.eight { 
+    width: 80% ;
+}
+.nine {
+    width: 90%;
+}
+.ten {
+    width: 100%;
+}

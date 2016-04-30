@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+ Carousel
+--------------------------------------------------------------------- */
+.carousel-item_isInactive {
+    position: absolute;
+    left: -9999px;
+    line-height: 0;
+}
+
+.carousel-item_isActive {
+    position: static;
+    left: 0;
+}
