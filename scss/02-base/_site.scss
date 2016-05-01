@@ -9,22 +9,20 @@ body {
 
 a {
     text-decoration: none;
+    cursor:pointer;
 }
 
 /* ---------------------------------------------------------------------
  Site
 --------------------------------------------------------------------- */
 .site {
-    width: $content-width;
+    max-width: $content-width;
     margin: auto;
+    box-sizing: border-box;
 }
 
 .site-hd {
     padding: 20px;
-}
-
-.site-nav {
-    background-color: #cccccc;
 }
 
 .site-bd {
