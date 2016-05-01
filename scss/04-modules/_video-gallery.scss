@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------------
+Video Gallery
+--------------------------------------------------------------------- */
+
+.gallery {
+    position: relative;
+
+    & li {
+        float: left;
+        margin-right: 16px;
+        margin-bottom: 18pt;
+    }
+
+    & a p {
+        position: relative;
+        margin-top: -29px;
+        padding: 7px;
+        background-color: white;
+        font-size: 13px;
+        font-weight: 600;
+        opacity: 0.6;
+        filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+    
+}

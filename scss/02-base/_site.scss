@@ -12,6 +12,41 @@ a {
     cursor:pointer;
 }
 
+h2 {
+    padding:1px 4px 8px 4px;
+    font-size: 10pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
+    margin-bottom:12px;
+}
+
+h3 {
+    background-color:$brand-blue;
+    height: 35px;
+    margin: 18px 0;
+    padding: 12px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+input {
+    position: relative;
+    width: 100%;
+    padding:3px 3px;
+    box-sizing: border-box;
+    margin-bottom:10px;
+}
+
+.quote {
+    font-family: $base-font-family;
+    line-height: 1.5;
+    font-size: 13px;
+    margin: 0 3px 10px 3px; 
+}
+
 /* ---------------------------------------------------------------------
  Site
 --------------------------------------------------------------------- */

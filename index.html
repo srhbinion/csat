@@ -1,34 +1,32 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-    <!-- META DATA -->
+    <!-- meta data -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SEO -->
     <title>Crispin and Mulberry</title>
     <meta name="description" content="Crispin and Mulberry is a destination and travel site with tips and contests.">
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" media="screen, projection" href="css/main.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" media="screen, projection" href="css/main.css" type="text/css"/>
 </head>
 <body>
     <div class="site">
         <!--header -->
-        <div class="site-hd row">
+        <header class="site-hd row">
             <a href="#" class="logo" >
-                <img src="assets/images/logo.png" alt="Crispin and Mulberry logo">
+                <img src="assets/images/logo.png" alt="Crispin and Mulberry logo"/>
             </a>
-            <div class="user-nav">
+            <nav class="userNav">
                 <ul class="hList">
                     <li><a href="#">My Account</a></li>
                     <li><a href="#">My Subscription</a></li>
                     <li><a href="#">My Articles</a></li>
                 </ul> 
-            </div>
-        </div>
-
-        <!--nav bar -->
-        <div class="site-nav row">
+            </nav>
+        </header>
+        <nav class="siteNav row">
             <ul class="ten columns">
                 <li><a href="#">Destinations</a></li>
                 <li><a href="#">Getaways</a></li>
@@ -37,43 +35,131 @@
                 <li><a href="#">Contests</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
-        </div>
+        </nav>
+        <!-- // end header -->
         <div class="site-bd">
-
-            <ul class="carousel" id="js-carousel">
-                <li class="carousel-item">
-                    <img src="assets/images/sub.jpg" alt="" />
-                </li>
-                <li class="carousel-item">
-                    <img src="assets/images/venetian.jpg" alt="" />
-                </li>
-                <li class="carousel-item">
-                    <img src="assets/images/london.jpg" alt="" />
-                </li>
-                <li class="carousel-item">
-                    <img src="assets/images/rushmore.jpg" alt="" />
-                </li>
-            </ul>
-
-        </div>
-        <div class="site-ft">
-
-            <div class="footer">
-
-                <ul class="hList">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Site Map</a></li>
-                    <li><a href="#">Contact Us</a></li>
+            <div class="row">
+                <!--carousel -->
+                <ul class="carousel seven columns" id="js-carousel">
+                    <li class="carousel-item">
+                        <img src="assets/images/sub.jpg" alt="USS Torsk submarine in Baltimore" />
+                    </li>
+                    <li class="carousel-item">
+                        <img src="assets/images/venetian.jpg" alt="Venetian gondola in Italy" />
+                    </li>
+                    <li class="carousel-item">
+                        <img src="assets/images/london.jpg" alt="Westminster Abbey in London" />
+                    </li>
+                    <li class="carousel-item">
+                        <img src="assets/images/rushmore.jpg" alt="Mount Rushmore National Memorial in Keystone" />
+                    </li>
                 </ul>
-
+                <!-- // end carousel -->
+                <!--newsletter sign up -->
+                <section class="signUpBox three columns">
+                    <form action="#" method="post" novalidate>
+                        <h2><span>&#9993</span> Sign Up For Our Newsletter</h2>
+                        <input class="innerShadow" type="email" placeholder="user@domain.com" />
+                        <div class="optionBox innerShadow">
+                            <p class="directions">Select the newsletter you'd like to receive</p>
+                            <ul >
+                                <li class="checkBox"><input type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li>
+                                <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Destinations &amp; Weekly Travel Tips</li>
+                            </ul>
+                        </div>
+                        <button type="submit" id="submit">Sign Up</button>
+                    </form >
+                    <ul class="policyBox innerShadow hList hListBlack">
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+                    </ul>
+                </section>
+                <!-- // end newsletter sign up -->
+                <!--testimonial -->
+                <section class="testimonialBox shadow three columns">
+                    <h2><span>&#9998<span> Featured Testimonial</h2>
+                    <p class="quote">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
+                    <button type="submit" id="submit">Read More</button>
+                </section>
+                <!-- // end testimonial -->
             </div>
-
+            <!--video gallery -->
+            <div class="row ten">
+                <h3>Popular Videos</h3>
+            </div>
+            <section class="row ten">
+                <ul class="gallery">
+                    <li>
+                        <a>
+                            <img src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
+                            <p>Team Mongoose<p>
+                        </a>    
+                    </li>
+                    <li>
+                        <a>
+                            <img src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
+                            <p>St. Paul's Cathedral</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="assets/video/v3-hollywood.png" alt="Hollywood"/>
+                            <p>Hollywood and Highland</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
+                            <p>Lake Wissota</ap>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
+                            <p>The Bellagio Fountains</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
+                            <p>The Atlantic Coast</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- // end video gallery -->
         </div>
+        <footer class="site-ft row">
+            <div class="footer">
+                <div class="six colmns">
+                    <ul class="hList">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <br>
+                    <ul class="hList">
+                        <li>&copy; 2013 Crispin &amp; Mulberry</li>
+                        <li>Mulberry 1640 Riverside Drive, Hill Valley, California, 95420</li>
+                    </ul>
+                </div>
+                <!--social media links -->
+                <div class="socialMedia four colmns">
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Flicker</li>
+                        <li>Twitter</li>
+                        <li>Vimo</li>
+                        <li>RSS</li>
+                    </ul>
+                </div>
+                <!-- // end social media links -->
+            </div>
+        </footer>
     </div>
 
     <!-- SCRIPTS -->
-    <script src="scripts/jquery-1.11.2.js"></script>
-    <script src="scripts/carousel.js"></script>
+    <script src="scripts/jquery-1.11.2.js" type="text/javascript"></script>
+    <script src="scripts/carousel.js" type="text/javascript"></script>
 </body>
 </html>

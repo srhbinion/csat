@@ -1,18 +1,18 @@
 /* ---------------------------------------------------------------------
  Header
 --------------------------------------------------------------------- */
-//T0DO: Get font and replace png logo for SVG
+//T0DO: Get logo font and replace png logo for SVG
 .logo{
     height: 100px;
 }
 
 //T0DO: remove margin top for smaller breakpoints
-.user-nav {
+.userNav {
     float: right;
     margin-top: 65px;
     text-align: right;
 
     & li a {
-      color: #ffffff;
+        color: #fff;
     }  
 }

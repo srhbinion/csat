@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------------
 Navigation Bar
 --------------------------------------------------------------------- */
-.site-nav {
+.siteNav {
     background-color: #cccccc; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#fcfcfc,#d2d2d2); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#fcfcfc,#d2d2d2); /* For Opera 11.1 to 12.0 */
@@ -17,7 +17,7 @@ Navigation Bar
 
     & li {
         float: left; 
-        padding: 2% 3.5% 2% 3.5%;
+        padding: 2% 3.4% 2% 3.4%;
         box-sizing: border-box;
 
         &:first-child {
@@ -38,7 +38,6 @@ Navigation Bar
             border: 1px solid;
             border-color: #bdbdbd #bdbdbd #fff #bdbdbd;
         }
-        
     }
 
     & a {
@@ -48,7 +47,6 @@ Navigation Bar
         font-size: 14px;
         text-shadow: 1px 1px #fff;
     }
-
 }
 
 

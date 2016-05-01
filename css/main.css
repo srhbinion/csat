@@ -1,5 +1,4 @@
-/*00-helper
--------------*/
+/*00-helper*/
 /* ---------------------------------------------------------------------
 Fonts
 --------------------------------------------------------------------- */
@@ -116,10 +115,8 @@ textarea {
   padding: 0;
 }
 
-/*01-vendor
--------------*/
-/*02-base
--------------*/
+/*01-vendor*/
+/*02-base*/
 /* ---------------------------------------------------------------------
  Base
 --------------------------------------------------------------------- */
@@ -132,6 +129,41 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+h2 {
+  padding: 1px 4px 8px 4px;
+  font-size: 10pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
+  margin-bottom: 12px;
+}
+
+h3 {
+  background-color: #0084d9;
+  height: 35px;
+  margin: 18px 0;
+  padding: 12px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+input {
+  position: relative;
+  width: 100%;
+  padding: 3px 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-family: "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 13px;
+  margin: 0 3px 10px 3px;
 }
 
 /* ---------------------------------------------------------------------
@@ -191,8 +223,27 @@ a {
 /* ---------------------------------------------------------------------
  Button
 --------------------------------------------------------------------- */
-/*03-layout
--------------*/
+button {
+  background-color: #0084d9;
+  padding: 5px 12px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+  position: relative;
+  float: right;
+  border: none;
+  margin-bottom: 10px;
+}
+button:hover {
+  background-color: #00527a;
+}
+button:active {
+  border: 1px solid #0084d9;
+  color: #00527a;
+  background-color: #fff;
+}
+
+/*03-layout*/
 /* ---------------------------------------------------------------------
 Grid
 --------------------------------------------------------------------- */
@@ -256,8 +307,7 @@ Grid
   width: 100%;
 }
 
-/*04-modules
--------------*/
+/*04-modules*/
 /* ---------------------------------------------------------------------
  Footer
 --------------------------------------------------------------------- */
@@ -267,6 +317,15 @@ Grid
 
 .footer a {
   color: #ffffff;
+}
+
+.socialMedia {
+  float: right;
+  margin-top: -25px;
+}
+.socialMedia li {
+  float: right;
+  margin-right: 10px;
 }
 
 /* ---------------------------------------------------------------------
@@ -283,6 +342,12 @@ Grid
   left: 0;
 }
 
+.carousel {
+  position: relative;
+  top: 0px;
+  left: -4px;
+}
+
 /* ---------------------------------------------------------------------
  Header
 --------------------------------------------------------------------- */
@@ -290,19 +355,19 @@ Grid
   height: 100px;
 }
 
-.user-nav {
+.userNav {
   float: right;
   margin-top: 65px;
   text-align: right;
 }
-.user-nav li a {
-  color: #ffffff;
+.userNav li a {
+  color: #fff;
 }
 
 /* ---------------------------------------------------------------------
 Navigation Bar
 --------------------------------------------------------------------- */
-.site-nav {
+.siteNav {
   background-color: #cccccc;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#fcfcfc, #d2d2d2);
@@ -315,20 +380,20 @@ Navigation Bar
   /* Standard syntax */
   cursor: pointer;
 }
-.site-nav ul {
+.siteNav ul {
   height: 20%;
   border: 1px solid;
   border-color: #bdbdbd #cccccc;
 }
-.site-nav li {
+.siteNav li {
   float: left;
-  padding: 2% 3.5% 2% 3.5%;
+  padding: 2% 3.4% 2% 3.4%;
   box-sizing: border-box;
 }
-.site-nav li:first-child {
+.siteNav li:first-child {
   margin: 0 auto;
 }
-.site-nav li:hover {
+.siteNav li:hover {
   background-color: #bdbdbd;
   background: -webkit-linear-gradient(#e1e3e6, #bdbdbd);
   /* For Safari 5.1 to 6.0 */
@@ -339,12 +404,12 @@ Navigation Bar
   background: linear-gradient(#e1e3e6, #bdbdbd);
   /* Standard syntax */
 }
-.site-nav li:active {
+.siteNav li:active {
   background: #fff;
   border: 1px solid;
   border-color: #bdbdbd #bdbdbd #fff #bdbdbd;
 }
-.site-nav a {
+.siteNav a {
   text-transform: uppercase;
   color: #4d4f52;
   font-weight: 600;
@@ -352,5 +417,83 @@ Navigation Bar
   text-shadow: 1px 1px #fff;
 }
 
-/*04-states
--------------*/
+/* ---------------------------------------------------------------------
+Sections
+--------------------------------------------------------------------- */
+.signUpBox,
+.testimonialBox {
+  background-color: #dbdbdb;
+  padding: 9px;
+  box-sizing: border-box;
+  margin-left: 13px;
+  width: 275px;
+  margin-bottom: 20px;
+  height: 227px;
+}
+
+.testimonialBox {
+  height: 155px;
+  margin-bottom: 0;
+}
+
+.optionBox {
+  background-color: #c7c6c6;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.policyBox {
+  position: relative;
+  height: 23px;
+  clear: both;
+  margin: 0px -8px;
+  padding: 6px 45px;
+  box-sizing: border-box;
+  background-color: #c7c6c6;
+}
+
+.innerShadow {
+  -moz-box-shadow: inset 0 0 7px #d5d5d5;
+  -webkit-box-shadow: inset 0 0 7px #d5d5d5;
+  box-shadow: inset 0 0 7px #d5d5d5;
+}
+
+.directions {
+  font-style: italic;
+  font-size: 12px;
+  padding: 8px;
+}
+
+.checkBox {
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+}
+.checkBox input {
+  width: 10%;
+}
+
+/* ---------------------------------------------------------------------
+Video Gallery
+--------------------------------------------------------------------- */
+.gallery {
+  position: relative;
+}
+.gallery li {
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 18pt;
+}
+.gallery a p {
+  position: relative;
+  margin-top: -29px;
+  padding: 7px;
+  background-color: white;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  /* For IE8 and earlier */
+}
+
+/*04-states*/
