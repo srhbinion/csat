@@ -1,18 +1,39 @@
 /* ---------------------------------------------------------------------
 Video Gallery
 --------------------------------------------------------------------- */
-
+//TODO: change width for smaller breakpoints
 .gallery {
-    position: relative;
+    width: 105%;
+
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
 
     & li {
         float: left;
-        margin-right: 16px;
-        margin-bottom: 18pt;
+        position: inherit;
+        box-sizing: border-box;
+        margin-top: 7pt;
+        margin-right: 21px;
+        margin-bottom: 7pt;
+        margin-left: 0px;
+
+
+        &:hover {
+            color: $background-color;
+            opacity: 0.6;
+            filter: alpha(opacity=60); /* For IE8 and earlier */
+        }
     }
 
     & a p {
-        position: relative;
+        position: absolute;
         margin-top: -29px;
         padding: 7px;
         background-color: white;
@@ -21,5 +42,9 @@ Video Gallery
         opacity: 0.6;
         filter: alpha(opacity=60); /* For IE8 and earlier */
     }
-    
+}
+
+.playButton a {
+    background-color: red;
+    border: 1 solid red;
 }

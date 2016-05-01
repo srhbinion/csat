@@ -28,10 +28,12 @@ Sections
     position: relative;
     height: 23px;
     clear: both;
-    margin: 0px -8px;
+    margin: 0px -9px;
     padding: 6px 45px;
     box-sizing: border-box;
     background-color: #c7c6c6;
+    border: 1px solid;
+    border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
 }
 
 .innerShadow {

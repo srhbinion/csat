@@ -10,14 +10,14 @@ Navigation Bar
     cursor:pointer;
 
     & ul { 
-        height: 20%;
+        height: 10%;
         border: 1px solid;
         border-color: #bdbdbd #cccccc;
     }
 
     & li {
         float: left; 
-        padding: 2% 3.4% 2% 3.4%;
+        padding: 1.2% 3.8% 1.2% 3.8%;
         box-sizing: border-box;
 
         &:first-child {
@@ -34,9 +34,11 @@ Navigation Bar
 
         //TODO: Make active tab bigger than nav bar
         &:active {
+            position: relative;
             background: #fff;
             border: 1px solid;
             border-color: #bdbdbd #bdbdbd #fff #bdbdbd;
+            top: -4px;
         }
     }
 
@@ -44,7 +46,7 @@ Navigation Bar
         text-transform: uppercase;
         color: #4d4f52;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         text-shadow: 1px 1px #fff;
     }
 }

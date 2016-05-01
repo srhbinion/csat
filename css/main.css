@@ -144,7 +144,7 @@ h2 {
 h3 {
   background-color: #0084d9;
   height: 35px;
-  margin: 18px 0;
+  margin: 18px 0 13px 0;
   padding: 12px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -157,6 +157,7 @@ input {
   padding: 3px 3px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  border: 1px solid #cecece;
 }
 
 .quote {
@@ -218,6 +219,28 @@ input {
   top: 50%;
   left: -12px;
   background-color: #ffffff;
+}
+
+.hListBlack > * + *:before {
+  content: "";
+  height: 14px;
+  width: 1px;
+  margin-top: -7px;
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  background-color: #000;
+}
+
+.hListGrey > * + *:before {
+  content: "";
+  height: 14px;
+  width: 1px;
+  margin-top: -7px;
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  background-color: #969696;
 }
 
 /* ---------------------------------------------------------------------
@@ -312,7 +335,9 @@ Grid
  Footer
 --------------------------------------------------------------------- */
 .footer {
-  color: #ffffff;
+  font-size: 10px;
+  wight: 200px;
+  color: #969696;
 }
 
 .footer a {
@@ -352,6 +377,8 @@ Grid
  Header
 --------------------------------------------------------------------- */
 .logo {
+  position: relative;
+  left: -30px;
   height: 100px;
 }
 
@@ -359,6 +386,7 @@ Grid
   float: right;
   margin-top: 65px;
   text-align: right;
+  margin-right: -19px;
 }
 .userNav li a {
   color: #fff;
@@ -381,13 +409,13 @@ Navigation Bar
   cursor: pointer;
 }
 .siteNav ul {
-  height: 20%;
+  height: 10%;
   border: 1px solid;
   border-color: #bdbdbd #cccccc;
 }
 .siteNav li {
   float: left;
-  padding: 2% 3.4% 2% 3.4%;
+  padding: 1.2% 3.8% 1.2% 3.8%;
   box-sizing: border-box;
 }
 .siteNav li:first-child {
@@ -405,15 +433,17 @@ Navigation Bar
   /* Standard syntax */
 }
 .siteNav li:active {
+  position: relative;
   background: #fff;
   border: 1px solid;
   border-color: #bdbdbd #bdbdbd #fff #bdbdbd;
+  top: -4px;
 }
 .siteNav a {
   text-transform: uppercase;
   color: #4d4f52;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   text-shadow: 1px 1px #fff;
 }
 
@@ -446,10 +476,12 @@ Sections
   position: relative;
   height: 23px;
   clear: both;
-  margin: 0px -8px;
+  margin: 0px -9px;
   padding: 6px 45px;
   box-sizing: border-box;
   background-color: #c7c6c6;
+  border: 1px solid;
+  border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
 }
 
 .innerShadow {
@@ -477,15 +509,32 @@ Sections
 Video Gallery
 --------------------------------------------------------------------- */
 .gallery {
-  position: relative;
+  width: 105%;
+}
+.gallery:before, .gallery:after {
+  display: table;
+  content: "";
+}
+.gallery:after {
+  clear: both;
 }
 .gallery li {
   float: left;
-  margin-right: 16px;
-  margin-bottom: 18pt;
+  position: inherit;
+  box-sizing: border-box;
+  margin-top: 7pt;
+  margin-right: 21px;
+  margin-bottom: 7pt;
+  margin-left: 0px;
+}
+.gallery li:hover {
+  color: #00527a;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  /* For IE8 and earlier */
 }
 .gallery a p {
-  position: relative;
+  position: absolute;
   margin-top: -29px;
   padding: 7px;
   background-color: white;
@@ -494,6 +543,11 @@ Video Gallery
   opacity: 0.6;
   filter: alpha(opacity=60);
   /* For IE8 and earlier */
+}
+
+.playButton a {
+  background-color: red;
+  border: 1 solid red;
 }
 
 /*04-states*/

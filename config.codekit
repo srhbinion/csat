@@ -24,6 +24,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/play-button.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2757,
+		"inputAbbreviatedPath": "\/assets\/images\/play-button.png",
+		"outputAbbreviatedPath": "\/assets\/images\/play-button.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/rushmore.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
