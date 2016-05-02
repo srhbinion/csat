@@ -5,9 +5,9 @@ Video Gallery
     float: left;
     position: relative;
     box-sizing: border-box;
-    margin-top: 7pt;
+    margin-top: 5pt;
     margin-right: 21px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 
     &:hover {
         color: $background-color;
@@ -17,8 +17,8 @@ Video Gallery
 
     & p {
         height: 31px;
-        margin-top: -31px;
-        padding: 12px 10px;
+        margin-top: -32px;
+        padding: 7px 15px;
         box-sizing: border-box;
         background-color: white;
         font-size: 13px;
@@ -44,6 +44,6 @@ Video Gallery
 
 .playButton {
     position:absolute;
-    top: 35%;
+    top: 34%;
     left: 40%;
 }

@@ -133,7 +133,7 @@ a {
 
 h2 {
   padding: 1px 4px 8px 4px;
-  font-size: 10pt;
+  font-size: 9pt;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -142,7 +142,7 @@ h2 {
 h3 {
   background-color: #0084d9;
   height: 35px;
-  margin: 18px 0 13px 0;
+  margin: 17px 0 13px 0;
   padding: 12px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ h3 {
 input {
   position: relative;
   width: 100%;
-  padding: 3px 3px;
+  padding: 6px 3px;
   box-sizing: border-box;
   margin-bottom: 10px;
   border: 1px solid #cecece;
@@ -162,7 +162,7 @@ input {
   font-family: "Helvetica", Arial, sans-serif;
   line-height: 1.5;
   font-size: 13px;
-  margin: 0 3px 10px 3px;
+  margin: 0 3px 16px 3px;
 }
 
 /* ---------------------------------------------------------------------
@@ -179,12 +179,12 @@ input {
 }
 
 .site-bd {
-  padding: 18px;
+  padding: 20px 18px 8px 18px;
   background-color: #ffffff;
 }
 
 .site-ft {
-  padding: 18px;
+  padding: 19px 18px 18px 18px;
   background-color: #2c2c2c;
 }
 
@@ -246,14 +246,14 @@ input {
 --------------------------------------------------------------------- */
 button {
   background-color: #0084d9;
-  padding: 5px 12px;
+  padding: 5px 10px;
   text-transform: uppercase;
   font-size: 13px;
   color: #fff;
   position: relative;
   float: right;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 button:hover {
   background-color: #00527a;
@@ -262,6 +262,60 @@ button:active {
   border: 1px solid #0084d9;
   color: #00527a;
   background-color: #fff;
+}
+
+/* ---------------------------------------------------------------------
+Sprites
+--------------------------------------------------------------------- */
+.socialMedia {
+  float: right;
+  margin-top: -34px;
+}
+.socialMedia li {
+  float: right;
+  margin-right: 1.8%;
+  background-image: url("/assets/images/social-media.png");
+  background-repeat: no-repeat;
+  height: 27px;
+  width: 27px;
+}
+.socialMedia li:first-child {
+  margin-right: 0px;
+}
+
+.facebook {
+  background-position: -1px 0;
+}
+.facebook:hover {
+  background-position: -31px 0;
+}
+
+.flickr {
+  background-position: -1px -30px;
+}
+.flickr:hover {
+  background-position: -31px -30px;
+}
+
+.twitter {
+  background-position: -1px -60px;
+}
+.twitter:hover {
+  background-position: -31px -60px;
+}
+
+.venmo {
+  background-position: -1px -90px;
+}
+.venmo:hover {
+  background-position: -31px -90px;
+}
+
+.rss {
+  background-position: -1px -120px;
+}
+.rss:hover {
+  background-position: -31px -120px;
 }
 
 /*03-layout*/
@@ -342,54 +396,6 @@ Grid
   color: #ffffff;
 }
 
-.socialMedia {
-  float: right;
-  margin-top: -25px;
-}
-.socialMedia li {
-  float: right;
-  margin-right: 2%;
-  background-image: url("/assets/images/social-media.png");
-  background-repeat: no-repeat;
-  height: 30px;
-  width: 30px;
-}
-
-.facebook {
-  background-position: 0 0;
-}
-.facebook:hover {
-  background-position: -32px 0;
-}
-
-.flickr {
-  background-position: 0 -30px;
-}
-.flickr:hover {
-  background-position: -32px -30px;
-}
-
-.twitter {
-  background-position: 0 -60px;
-}
-.twitter:hover {
-  background-position: -32px -60px;
-}
-
-.venmo {
-  background-position: 0 -90px;
-}
-.venmo:hover {
-  background-position: -32px -90px;
-}
-
-.rss {
-  background-position: 0 -120px;
-}
-.rss:hover {
-  background-position: -32px -120px;
-}
-
 /* ---------------------------------------------------------------------
  Carousel
 --------------------------------------------------------------------- */
@@ -445,19 +451,34 @@ Navigation Bar
   background: linear-gradient(#fcfcfc, #d2d2d2);
   /* Standard syntax */
   cursor: pointer;
+  border: 1px solid;
+  border-color: #bdbdbd #d2d2d2;
 }
 .siteNav ul {
-  height: 10.5%;
-  border: 1px solid;
-  border-color: #bdbdbd #cccccc;
+  height: 14%;
+  width: 101.4%;
 }
 .siteNav li {
   float: left;
-  padding: 1.2% 3.8% 1.2% 3.8%;
+  padding: 1.4% 3.9% 1.3% 3.9%;
   box-sizing: border-box;
+  /* Active Tab State - makes site look like comp */
+        /* Active Tab State - tiggers on click
+        &:active {
+            position: relative;
+            background: #fff;
+            margin: -2px -1px -2px -2px;
+            border: 2px solid;
+            border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
+
+            &:first-child {
+                margin-left: -6px;
+                margin-right: -2px;
+            }
+        }*/
 }
 .siteNav li:first-child {
-  margin: 0 auto;
+  margin-left: -5px;
 }
 .siteNav li:hover {
   background-color: #bdbdbd;
@@ -470,12 +491,12 @@ Navigation Bar
   background: linear-gradient(#e1e3e6, #bdbdbd);
   /* Standard syntax */
 }
-.siteNav li:active {
+.siteNav li:nth-child(4n) {
   position: relative;
   background: #fff;
-  border: 1px solid;
-  border-color: #bdbdbd #bdbdbd #fff #bdbdbd;
-  top: -4px;
+  margin: -2px -1px -2px -2px;
+  border: 2px solid;
+  border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
 }
 .siteNav a {
   text-transform: uppercase;
@@ -491,11 +512,11 @@ Sections
 .signUpBox,
 .testimonialBox {
   background-color: #dbdbdb;
-  padding: 9px;
+  padding: 6px 9px 9px 9px;
   box-sizing: border-box;
-  margin-left: 13px;
-  width: 275px;
-  margin-bottom: 20px;
+  margin-left: 14px;
+  width: 28.5%;
+  margin-bottom: 21px;
   height: 227px;
 }
 
@@ -504,24 +525,7 @@ Sections
   margin-bottom: 0;
 }
 
-.pencil-icon {
-  position: relative;
-  border: 1px solid;
-  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
-}
-.pencil-icon img {
-  height: 19px;
-  padding: 0 0 4px 0;
-  margin-left: -3px;
-}
-.pencil-icon h2 {
-  width: 90%;
-  float: right;
-  height: 18px;
-  margin-left: -10px;
-  padding: 3px 0 4px 0;
-}
-
+/* Newsletter Box */
 .newsletter-icon {
   position: relative;
   border: 1px solid;
@@ -540,30 +544,6 @@ Sections
   padding: 3px 0 4px 0;
 }
 
-.optionBox {
-  background-color: #c7c6c6;
-  margin-bottom: 10px;
-  clear: both;
-}
-
-.policyBox {
-  position: relative;
-  height: 25px;
-  clear: both;
-  margin: 0px -9px;
-  padding: 6px 45px;
-  box-sizing: border-box;
-  background-color: #c7c6c6;
-  border: 1px solid;
-  border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
-}
-
-.innerShadow {
-  -moz-box-shadow: inset 0 0 7px #d5d5d5;
-  -webkit-box-shadow: inset 0 0 7px #d5d5d5;
-  box-shadow: inset 0 0 7px #d5d5d5;
-}
-
 .directions {
   font-style: italic;
   font-size: 12px;
@@ -574,9 +554,53 @@ Sections
   position: relative;
   font-size: 12px;
   font-weight: 600;
+  margin-left: 2px;
 }
 .checkBox input {
   width: 10%;
+}
+
+.policyBox {
+  position: relative;
+  height: 26px;
+  clear: both;
+  margin: 0px -9px;
+  padding: 6px 45px;
+  box-sizing: border-box;
+  background-color: #c7c6c6;
+  border: 1px solid;
+  border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
+}
+
+/* Testimonial Box */
+.pencil-icon {
+  position: relative;
+  border: 1px solid;
+  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
+}
+.pencil-icon img {
+  height: 19px;
+  padding: 0 0 4px 0;
+  margin-left: -3px;
+}
+.pencil-icon h2 {
+  width: 90%;
+  float: right;
+  height: 16px;
+  margin-left: -10px;
+  padding: 4px 0 0 0;
+}
+
+.optionBox {
+  background-color: #c7c6c6;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.innerShadow {
+  -moz-box-shadow: inset 0 0 7px #d5d5d5;
+  -webkit-box-shadow: inset 0 0 7px #d5d5d5;
+  box-shadow: inset 0 0 7px #d5d5d5;
 }
 
 /* ---------------------------------------------------------------------
@@ -586,9 +610,9 @@ Video Gallery
   float: left;
   position: relative;
   box-sizing: border-box;
-  margin-top: 7pt;
+  margin-top: 5pt;
   margin-right: 21px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 .video:hover {
   color: #00527a;
@@ -598,8 +622,8 @@ Video Gallery
 }
 .video p {
   height: 31px;
-  margin-top: -31px;
-  padding: 12px 10px;
+  margin-top: -32px;
+  padding: 7px 15px;
   box-sizing: border-box;
   background-color: white;
   font-size: 13px;
@@ -622,7 +646,7 @@ Video Gallery
 
 .playButton {
   position: absolute;
-  top: 35%;
+  top: 34%;
   left: 40%;
 }
 

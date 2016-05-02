@@ -1,3 +1,60 @@
 /* ---------------------------------------------------------------------
 Sprites
 --------------------------------------------------------------------- */
+.socialMedia {
+    float: right;
+    margin-top: -34px;
+
+    & li {
+        float: right;
+        margin-right: 1.8%;
+        background-image:url("/assets/images/social-media.png");
+        background-repeat: no-repeat;
+        height: 27px;
+        width: 27px;
+
+        &:first-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.facebook {
+    background-position: -1px 0;
+
+    &:hover {
+        background-position: -31px 0;  
+    }
+}
+
+.flickr {
+    background-position: -1px -30px;
+
+    &:hover {
+        background-position: -31px -30px;  
+    }
+}
+
+.twitter {
+    background-position: -1px -60px;
+
+    &:hover {
+        background-position: -31px -60px;  
+    }
+}
+
+.venmo {
+    background-position: -1px -90px;
+
+    &:hover {
+        background-position: -31px -90px;  
+    }
+}
+
+.rss {
+    background-position: -1px -120px;
+
+    &:hover {
+        background-position: -31px -120px;
+    }
+}

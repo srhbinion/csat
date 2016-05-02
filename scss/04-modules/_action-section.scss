@@ -4,11 +4,11 @@ Sections
 .signUpBox,
 .testimonialBox {
     background-color: $brand-grey;
-    padding: 9px;
+    padding: 6px 9px 9px 9px;
     box-sizing: border-box;
-    margin-left: 13px;
-    width: 275px;
-    margin-bottom: 20px;
+    margin-left: 14px;
+    width: 28.5%;
+    margin-bottom: 21px;
     height: 227px;
 }
 
@@ -17,26 +17,7 @@ Sections
    margin-bottom: 0;
 }
 
-.pencil-icon {
-    position: relative;
-    border: 1px solid;
-    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
-
-    & img {
-        height: 19px;
-        padding: 0 0 4px 0;
-        margin-left: -3px;
-    }
-
-    & h2 {
-        width: 90%;
-        float: right;
-        height: 18px;
-        margin-left: -10px;
-        padding: 3px 0 4px 0;
-    }
-}
-
+/* Newsletter Box */
 .newsletter-icon {
     position: relative;
     border: 1px solid;
@@ -56,29 +37,6 @@ Sections
         padding: 3px 0 4px 0;
     }
 }
-.optionBox {
-    background-color: #c7c6c6;
-    margin-bottom:10px;
-    clear: both;
-}
-
-.policyBox {
-    position: relative;
-    height: 25px;
-    clear: both;
-    margin: 0px -9px;
-    padding: 6px 45px;
-    box-sizing: border-box;
-    background-color: #c7c6c6;
-    border: 1px solid;
-    border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
-}
-
-.innerShadow {
-   -moz-box-shadow:    inset 0 0 7px #d5d5d5;
-   -webkit-box-shadow: inset 0 0 7px #d5d5d5;
-   box-shadow:         inset 0 0 7px #d5d5d5;
-}
 
 .directions {
     font-style: italic;
@@ -90,8 +48,54 @@ Sections
     position: relative;
     font-size: 12px;
     font-weight: 600;
+    margin-left: 2px;
     
     & input {
         width: 10%;
     }
+}
+
+.policyBox {
+    position: relative;
+    height: 26px;
+    clear: both;
+    margin: 0px -9px;
+    padding: 6px 45px;
+    box-sizing: border-box;
+    background-color: #c7c6c6;
+    border: 1px solid;
+    border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
+}
+
+/* Testimonial Box */
+.pencil-icon {
+    position: relative;
+    border: 1px solid;
+    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
+
+    & img {
+        height: 19px;
+        padding: 0 0 4px 0;
+        margin-left: -3px;
+    }
+
+    & h2 {
+        width: 90%;
+        float: right;
+        height: 16px;
+        margin-left: -10px;
+        padding: 4px 0 0 0;
+    }
+}
+
+.optionBox {
+    background-color: #c7c6c6;
+    margin-bottom:10px;
+    clear: both;
+}
+
+.innerShadow {
+   -moz-box-shadow:    inset 0 0 7px #d5d5d5;
+   -webkit-box-shadow: inset 0 0 7px #d5d5d5;
+   box-shadow:         inset 0 0 7px #d5d5d5;
 }
