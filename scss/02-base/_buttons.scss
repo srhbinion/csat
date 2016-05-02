@@ -2,23 +2,25 @@
  Button
 --------------------------------------------------------------------- */
 button {
+    position: relative;
+    float: right;
     background-color: $brand-blue;
-    padding: 5px 10px;
     text-transform: uppercase;
     font-size: 13px;
     color: #fff;
-    position: relative;
-    float: right;
+    margin-top: 5px;
+    margin-bottom: 10px;
     border: none;
-    margin-bottom: 6px;
+    padding: 4px 8px;
+    box-sizing: border-box;
 
     &:hover {
         background-color: $background-color;
     }
 
     &:active {
-        border: 1px solid $brand-blue;
         color: $background-color;
         background-color: #fff;
+        border: 1px solid $brand-blue;
     }
 }

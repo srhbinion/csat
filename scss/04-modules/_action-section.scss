@@ -1,101 +1,120 @@
 /* ---------------------------------------------------------------------
 Sections
 --------------------------------------------------------------------- */
-.signUpBox,
-.testimonialBox {
+.signUpBox {
     background-color: $brand-grey;
-    padding: 6px 9px 9px 9px;
-    box-sizing: border-box;
-    margin-left: 14px;
-    width: 28.5%;
-    margin-bottom: 21px;
     height: 227px;
-}
-
-.testimonialBox {
-   height: 155px;
-   margin-bottom: 0;
+    width: 100%;
+    padding: 5px $gutter-width/2;
+    box-sizing: border-box;
+    margin-bottom: $gutter-width;
 }
 
 /* Newsletter Box */
 .newsletter-icon {
     position: relative;
     border: 1px solid;
-    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
+    border-color: $brand-grey $brand-grey $brand-dk-grey $brand-grey;
+    height: 23px;
 
     & img {
         height: 19px;
-        padding: 0 0 4px 0;
         margin-left: -3px;
     }
 
     & h2 {
         width: 90%;
-        float: right;
-        height: 18px;
-        margin-left: -10px;
-        padding: 3px 0 4px 0;
-    }
-}
-
-.directions {
-    font-style: italic;
-    font-size: 12px;
-    padding: 8px;
-}
-
-.checkBox {
-    position: relative;
-    font-size: 12px;
-    font-weight: 600;
-    margin-left: 2px;
-    
-    & input {
-        width: 10%;
-    }
-}
-
-.policyBox {
-    position: relative;
-    height: 26px;
-    clear: both;
-    margin: 0px -9px;
-    padding: 6px 45px;
-    box-sizing: border-box;
-    background-color: #c7c6c6;
-    border: 1px solid;
-    border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
-}
-
-/* Testimonial Box */
-.pencil-icon {
-    position: relative;
-    border: 1px solid;
-    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
-
-    & img {
-        height: 19px;
-        padding: 0 0 4px 0;
-        margin-left: -3px;
-    }
-
-    & h2 {
-        width: 90%;
-        float: right;
-        height: 16px;
-        margin-left: -10px;
         padding: 4px 0 0 0;
+        float: right;
+        margin-bottom: 1px;
+    }
+}
+
+.newsletterEmail {
+    margin-top: $gutter-width/2;
+    height: 89px;
+
+    & h5 {
+        font-style: italic;
+        font-size: 12px;
+        margin:$gutter-width/2;
+    }
+
+    & input {
+        border: 1px solid $brand-md-grey;
+        -moz-box-shadow: inset 0 0 7px $brand-md-grey;
+        -webkit-box-shadow: inset 0 0 7px $brand-md-grey;
+        box-shadow: inset 0 0 7px $brand-md-grey;
     }
 }
 
 .optionBox {
     background-color: #c7c6c6;
-    margin-bottom:10px;
+    margin-bottom: 6px;
     clear: both;
+    height:78px;
+    padding-bottom: 2px;
 }
 
-.innerShadow {
-   -moz-box-shadow:    inset 0 0 7px #d5d5d5;
-   -webkit-box-shadow: inset 0 0 7px #d5d5d5;
-   box-shadow:         inset 0 0 7px #d5d5d5;
+.checkBox {
+    position: relative;
+    font-size: 12px;
+    font-weight:600;
+    margin-top: -2px;
+
+    & input {
+        width: 10px;
+        margin-right: $gutter-width/2;
+        margin-left: $gutter-width/2;
+    }
+}
+
+.policyBox {
+    height: 25px;
+    clear: both;
+    margin: 0px -10px;
+    padding: 6px 45px;
+    box-sizing: border-box;
+    background-color: $brand-box-grey;
+    border: 1px solid;
+    border-color: $brand-dk-grey $brand-box-grey $brand-box-grey $brand-box-grey;
+}
+
+/* Testimonial Box */
+
+.testimonialBox {
+   height: 156px;
+   background-color: $brand-grey;
+   width: 100%;
+   padding: 5px $gutter-width/2;
+   box-sizing: border-box;
+}
+
+.pencil-icon {
+    position: relative;
+    border: 1px solid;
+    border-color: $brand-grey $brand-grey $brand-dk-grey $brand-grey;
+    height: 26px;
+
+    & img {
+        height: 19px;
+        margin-left: -3px;
+    }
+
+    & h2 {
+        width: 90%;
+        padding: 4px 0 0 0;
+        float: right;
+        height: 11px;
+        margin-left: -3px;
+        clear: both;
+    }
+}
+
+.testimony {
+    font-family: $base-font-family;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 4px;
 }

@@ -13,26 +13,31 @@
 </head>
 <body>
     <div class="site">
-        <header class="site-hd">
-            <!--logo -->
+        <header class="site-hd"> 
+            <!--logo row -->
             <div class="row">
-                <a href="#" class="logo" >
-                    <img src="assets/images/logo.png" alt="Crispin and Mulberry logo"/>
-                </a>
-                <nav class="userNav">
-                    <ul class="hList">
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">My Subscription</a></li>
-                        <li><a href="#">My Articles</a></li>
-                    </ul> 
-                </nav>
+                <div class="three columns">
+                    <a href="#" class="logo">
+                        <img src="assets/images/logo.png" alt="Crispin and Mulberry logo"/>
+                    </a>
+                </div>
+                
+                <div class="seven columns">
+                    <nav class="userNav">
+                        <ul class="hList">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">My Subscription</a></li>
+                            <li><a href="#">My Articles</a></li>
+                        </ul> 
+                    </nav>
+                </div>
+                <!-- // end logo row-->
             </div>
-            <!-- // end logo -->
             <!--nav bar -->
             <div class="row">
-                <nav>
-                    <div class="ten columns" style="background-color: green;">
-                        <ul class="siteNav">
+                <div class="ten columns">
+                    <nav class="siteNav">
+                        <ul>
                             <li><a href="#">Destinations</a></li>
                             <li><a href="#">Getaways</a></li>
                             <li><a href="#">Travel Tips</a></li>
@@ -40,8 +45,8 @@
                             <li><a href="#">Contests</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
-                    </div>
-                <nav>
+                    <nav>
+                </div>
             </div>
             <!-- // end nav bar -->
         </header>
@@ -50,39 +55,41 @@
             <div class="row">
                 <!--carousel -->
                 <div class="seven columns">
-                    <div class="carousel-btn">
-                        <input id="carousel-item-1" type="radio" name="carousel-dots" checked>
-                        <input id="carousel-item-2" type="radio" name="carousel-dots">
-                        <input id="carousel-item-3" type="radio" name="carousel-dots">
-                        <input id="carousel-item-4" type="radio" name="carousel-dots">
+                    <div class="carousel-player">
+                        <ul class="carousel" id="js-carousel">
+                            <li class="carousel-item">
+                                <img src="assets/images/sub.jpg" alt="USS Torsk submarine in Baltimore" />
+                            </li>
+                            <li class="carousel-item">
+                                <img src="assets/images/venetian.jpg" alt="Venetian gondola in Italy" />
+                            </li>
+                            <li class="carousel-item">
+                                <img src="assets/images/london.jpg" alt="Westminster Abbey in London" />
+                            </li>
+                            <li class="carousel-item">
+                                <img src="assets/images/rushmore.jpg" alt="Mount Rushmore National Memorial in Keystone" />
+                            </li>
+                        </ul>
+                        <div class="carousel-btn">
+                            <input id="carousel-item-1" type="radio" name="carousel-dots" checked>
+                            <input id="carousel-item-2" type="radio" name="carousel-dots">
+                            <input id="carousel-item-3" type="radio" name="carousel-dots">
+                            <input id="carousel-item-4" type="radio" name="carousel-dots">
+                        </div>
                     </div>
-                    <ul class="carousel" id="js-carousel">
-                        <li class="carousel-item">
-                            <img src="assets/images/sub.jpg" alt="USS Torsk submarine in Baltimore" />
-                        </li>
-                        <li class="carousel-item">
-                            <img src="assets/images/venetian.jpg" alt="Venetian gondola in Italy" />
-                        </li>
-                        <li class="carousel-item">
-                            <img src="assets/images/london.jpg" alt="Westminster Abbey in London" />
-                        </li>
-                        <li class="carousel-item">
-                            <img src="assets/images/rushmore.jpg" alt="Mount Rushmore National Memorial in Keystone" />
-                        </li>
-                    </ul>
                 </div>
                 <!-- // end carousel -->
                 <!--newsletter sign up -->
                 <div class="three columns">
                     <section class="signUpBox">
-                        <form action="#" method="post" novalidate>
-                            <div class="newsletter-icon">
-                                <img src="assets/images/envelope.png" alt="icon" />
-                                <h2>Sign Up For Our Newsletter</h2>
-                            </div>
-                            <input class="innerShadow" type="email" placeholder="user@domain.com" />
-                            <div class="optionBox innerShadow">
-                                <p class="directions">Select the newsletter you'd like to receive</p>
+                        <div class="newsletter-icon">
+                            <img src="assets/images/envelope.png" alt="icon" />
+                            <h2>Sign Up For Our Newsletter</h2>
+                        </div>
+                        <form class="newsletterEmail" action="#" method="post" novalidate>
+                            <h4><input type="email" placeholder="user@domain.com" /></h4>
+                            <div class="optionBox">
+                                <h5>Select the newsletter you'd like to receive</h5>
                                 <ul >
                                     <li class="checkBox"><input type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li>
                                     <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
@@ -99,12 +106,12 @@
                 <!-- // end newsletter sign up -->
                 <!--testimonial -->
                 <div class="three columns">
-                    <section class="testimonialBox shadow">
+                    <section class="testimonialBox">
                         <div class="pencil-icon">
                             <img src="assets/images/pencil.png" alt="icon" />
                             <h2>Featured Testimonial</h2>
                         </div>
-                        <p class="quote">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
+                        <p class="testimony">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
                         <button type="submit" id="submit">Read More</button>
                     </section>
                 </div>

@@ -124,6 +124,7 @@ body {
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 13px;
   background-color: #00527a;
+  color: #2c2c2c;
 }
 
 a {
@@ -149,20 +150,23 @@ h3 {
   color: #fff;
 }
 
+h4 {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
 input {
   position: relative;
   width: 100%;
-  padding: 6px 3px;
+  padding: 6px 6px;
   box-sizing: border-box;
   margin-bottom: 10px;
   border: 1px solid #cecece;
-}
-
-.quote {
-  font-family: "Helvetica", Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 13px;
-  margin: 0 3px 16px 3px;
 }
 
 /* ---------------------------------------------------------------------
@@ -171,21 +175,22 @@ input {
 .site {
   max-width: 1000px;
   margin: auto;
-  box-sizing: border-box;
-  padding: 20px;
+  padding: 18px 18px 0 18px;
 }
 
 .site-hd {
-  margin-bottom: 20px;
+  height: 152px;
+  margin-bottom: 0px;
 }
 
 .site-bd {
-  padding: 20px 18px 8px 18px;
+  padding: 22px 10px;
   background-color: #ffffff;
+  height: 600px;
 }
 
 .site-ft {
-  padding: 19px 18px 18px 18px;
+  padding: 20px 18px;
   background-color: #2c2c2c;
 }
 
@@ -246,23 +251,25 @@ input {
  Button
 --------------------------------------------------------------------- */
 button {
+  position: relative;
+  float: right;
   background-color: #0084d9;
-  padding: 5px 10px;
   text-transform: uppercase;
   font-size: 13px;
   color: #fff;
-  position: relative;
-  float: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
   border: none;
-  margin-bottom: 6px;
+  padding: 4px 8px;
+  box-sizing: border-box;
 }
 button:hover {
   background-color: #00527a;
 }
 button:active {
-  border: 1px solid #0084d9;
   color: #00527a;
   background-color: #fff;
+  border: 1px solid #0084d9;
 }
 
 /* ---------------------------------------------------------------------
@@ -343,8 +350,8 @@ Grid
 .columns {
   width: 100%;
   float: left;
+  padding: 0 10px;
   box-sizing: border-box;
-  padding: 0 0.5%;
 }
 
 .one {
@@ -404,6 +411,17 @@ Grid
 /* ---------------------------------------------------------------------
  Carousel
 --------------------------------------------------------------------- */
+.carousel-player {
+  position: relative;
+  top: 0px;
+  border: 1px solid blue;
+}
+.carousel-player img {
+  height: 403px;
+  width: 100%;
+}
+
+/* animation */
 .carousel-item_isInactive {
   position: absolute;
   left: -9999px;
@@ -412,24 +430,19 @@ Grid
 
 .carousel-item_isActive {
   position: static;
-  left: 0;
-}
-
-.carousel {
-  position: relative;
-  top: 0px;
-  left: -4px;
+  width: 100%;
 }
 
 .carousel-btn {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px 0 20px 42%;
+  box-sizing: border-box;
   cursor: default;
-  background: red;
-  padding: 10px;
-  margin-left: -5px;
-  padding-left: 45%;
 }
 
-/*  */
+/* radio button */
 .carousel-btn input {
   height: 18px;
   width: 18px;
@@ -438,15 +451,17 @@ Grid
 /* ---------------------------------------------------------------------
  Header
 --------------------------------------------------------------------- */
-.logo {
+.logo img {
   position: relative;
-  height: 100px;
+  height: 85px;
+  width: 275px;
+  margin-left: -4px;
+  margin-bottom: 28px;
 }
 
 .userNav {
   float: right;
-  padding-bottom: 79px;
-  margin-top: -37px;
+  margin: 65px 0 35px;
 }
 .userNav li a {
   color: #fff;
@@ -456,6 +471,9 @@ Grid
 Navigation Bar
 --------------------------------------------------------------------- */
 .siteNav {
+  position: relative;
+  width: 102.1%;
+  margin-left: -10px;
   background-color: #cccccc;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#fcfcfc, #d2d2d2);
@@ -467,34 +485,24 @@ Navigation Bar
   background: linear-gradient(#fcfcfc, #d2d2d2);
   /* Standard syntax */
   cursor: pointer;
-  border: 1px solid;
-  border-color: #bdbdbd #d2d2d2;
 }
 .siteNav ul {
-  height: 14%;
-  width: 101.4%;
+  border: 1px solid;
+  border-color: #bdbdbd #cccccc;
 }
 .siteNav li {
   float: left;
-  padding: 1.4% 3.9% 1.3% 3.9%;
+  padding: 1.4% 3.9% 1.1% 3.9%;
   box-sizing: border-box;
   /* Active Tab State - makes site look like comp */
-        /* Active Tab State - tiggers on click
-        &:active {
-            position: relative;
-            background: #fff;
-            margin: -2px -1px -2px -2px;
-            border: 2px solid;
-            border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
-
-            &:first-child {
-                margin-left: -6px;
-                margin-right: -2px;
-            }
-        }*/
-}
-.siteNav li:first-child {
-  margin-left: -5px;
+  /* Active Tab State - tiggers on click */
+  /* &:active {
+      background: #fff;
+      margin: -4px -2px -15px -2px;
+      padding-bottom: 14px;
+      border: 2px solid;
+      border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
+  } */
 }
 .siteNav li:hover {
   background-color: #bdbdbd;
@@ -508,9 +516,10 @@ Navigation Bar
   /* Standard syntax */
 }
 .siteNav li:nth-child(4n) {
-  position: relative;
   background: #fff;
-  margin: -2px -1px -2px -2px;
+  margin: -4px -2px -15px -2px;
+  padding-bottom: 12px;
+  padding-top: 1.6%;
   border: 2px solid;
   border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
 }
@@ -525,98 +534,114 @@ Navigation Bar
 /* ---------------------------------------------------------------------
 Sections
 --------------------------------------------------------------------- */
-.signUpBox,
-.testimonialBox {
+.signUpBox {
   background-color: #dbdbdb;
-  padding: 6px 9px 9px 9px;
-  box-sizing: border-box;
-  margin-left: 14px;
-  width: 28.5%;
-  margin-bottom: 21px;
   height: 227px;
-}
-
-.testimonialBox {
-  height: 155px;
-  margin-bottom: 0;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 /* Newsletter Box */
 .newsletter-icon {
   position: relative;
   border: 1px solid;
-  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
+  border-color: #dbdbdb #dbdbdb #2c2c2c #dbdbdb;
+  height: 23px;
 }
 .newsletter-icon img {
   height: 19px;
-  padding: 0 0 4px 0;
   margin-left: -3px;
 }
 .newsletter-icon h2 {
   width: 90%;
+  padding: 4px 0 0 0;
   float: right;
-  height: 18px;
-  margin-left: -10px;
-  padding: 3px 0 4px 0;
+  margin-bottom: 1px;
 }
 
-.directions {
+.newsletterEmail {
+  margin-top: 10px;
+  height: 89px;
+}
+.newsletterEmail h5 {
   font-style: italic;
   font-size: 12px;
-  padding: 8px;
+  margin: 10px;
+}
+.newsletterEmail input {
+  border: 1px solid #b5b4b4;
+  -moz-box-shadow: inset 0 0 7px #b5b4b4;
+  -webkit-box-shadow: inset 0 0 7px #b5b4b4;
+  box-shadow: inset 0 0 7px #b5b4b4;
+}
+
+.optionBox {
+  background-color: #c7c6c6;
+  margin-bottom: 6px;
+  clear: both;
+  height: 78px;
+  padding-bottom: 2px;
 }
 
 .checkBox {
   position: relative;
   font-size: 12px;
   font-weight: 600;
-  margin-left: 2px;
+  margin-top: -2px;
 }
 .checkBox input {
-  width: 10%;
+  width: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .policyBox {
-  position: relative;
-  height: 26px;
+  height: 25px;
   clear: both;
-  margin: 0px -9px;
+  margin: 0px -10px;
   padding: 6px 45px;
   box-sizing: border-box;
   background-color: #c7c6c6;
   border: 1px solid;
-  border-color: #4d4f52 #c7c6c6 #c7c6c6 #c7c6c6;
+  border-color: #2c2c2c #c7c6c6 #c7c6c6 #c7c6c6;
 }
 
 /* Testimonial Box */
+.testimonialBox {
+  height: 156px;
+  background-color: #dbdbdb;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
 .pencil-icon {
   position: relative;
   border: 1px solid;
-  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
+  border-color: #dbdbdb #dbdbdb #2c2c2c #dbdbdb;
+  height: 26px;
 }
 .pencil-icon img {
   height: 19px;
-  padding: 0 0 4px 0;
   margin-left: -3px;
 }
 .pencil-icon h2 {
   width: 90%;
-  float: right;
-  height: 16px;
-  margin-left: -10px;
   padding: 4px 0 0 0;
-}
-
-.optionBox {
-  background-color: #c7c6c6;
-  margin-bottom: 10px;
+  float: right;
+  height: 11px;
+  margin-left: -3px;
   clear: both;
 }
 
-.innerShadow {
-  -moz-box-shadow: inset 0 0 7px #d5d5d5;
-  -webkit-box-shadow: inset 0 0 7px #d5d5d5;
-  box-shadow: inset 0 0 7px #d5d5d5;
+.testimony {
+  font-family: "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin-top: 4px;
 }
 
 /* ---------------------------------------------------------------------

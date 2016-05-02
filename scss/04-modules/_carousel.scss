@@ -1,6 +1,18 @@
 /* ---------------------------------------------------------------------
  Carousel
 --------------------------------------------------------------------- */
+.carousel-player {
+    position: relative;
+    top: 0px;
+    border: 1px solid blue;
+    
+    & img {
+        height: 403px;
+        width: 100%;
+    }
+}
+
+/* animation */
 .carousel-item_isInactive {
     position: absolute;
     left: -9999px;
@@ -9,25 +21,20 @@
 
 .carousel-item_isActive {
     position: static;
-    left: 0;
-}
-
-.carousel{
-    position: relative;
-    top: 0px;
-    left: -4px;
+    width: 100%;
 }
 
 //TODO: add arrows and circle progrss bar
 .carousel-btn {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: $gutter-width 0 $gutter-width 42%;
+    box-sizing: border-box;
     cursor: default;
-    background: red;
-    padding: 10px;
-    margin-left: -5px;
-    padding-left: 45%;
 }
 
-/*  */
+/* radio button */
 .carousel-btn input {
     height: 18px;
     width: 18px;

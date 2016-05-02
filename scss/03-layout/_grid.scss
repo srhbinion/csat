@@ -23,8 +23,9 @@ Grid
 .columns {
     width: 100%;
     float: left;
+    padding: 0 $gutter-width/2;
     box-sizing: border-box;
-    padding: 0 0.5%;
+    //$gutter-width: 20px;
 }
 .one { 
     width: 10% ;
