@@ -416,6 +416,20 @@ Grid
   left: -4px;
 }
 
+.carousel-btn {
+  cursor: default;
+  background: red;
+  padding: 10px;
+  margin-left: -5px;
+  padding-left: 45%;
+}
+
+/* Hide the radio button */
+.carousel-btn input {
+  height: 18px;
+  width: 18px;
+}
+
 /* ---------------------------------------------------------------------
  Header
 --------------------------------------------------------------------- */
