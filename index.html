@@ -13,31 +13,40 @@
 </head>
 <body>
     <div class="site">
-        <!--header -->
-        <header class="site-hd row">
-            <a href="#" class="logo" >
-                <img src="assets/images/logo.png" alt="Crispin and Mulberry logo"/>
-            </a>
-            <nav class="userNav">
-                <ul class="hList">
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">My Subscription</a></li>
-                    <li><a href="#">My Articles</a></li>
-                </ul> 
-            </nav>
+        <header class="site-hd">
+            <!--logo -->
+            <div class="row">
+                <a href="#" class="logo" >
+                    <img src="assets/images/logo.png" alt="Crispin and Mulberry logo"/>
+                </a>
+                <nav class="userNav">
+                    <ul class="hList">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">My Subscription</a></li>
+                        <li><a href="#">My Articles</a></li>
+                    </ul> 
+                </nav>
+            </div>
+            <!-- // end logo -->
+            <!--nav bar -->
+            <div class="row">
+                <nav>
+                    <div class="ten columns" style="background-color: green;">
+                        <ul class="siteNav">
+                            <li><a href="#">Destinations</a></li>
+                            <li><a href="#">Getaways</a></li>
+                            <li><a href="#">Travel Tips</a></li>
+                            <li><a href="#">News &amp; Features</a></li>
+                            <li><a href="#">Contests</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                <nav>
+            </div>
+            <!-- // end nav bar -->
         </header>
-        <nav class="siteNav row">
-            <ul class="ten columns">
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Getaways</a></li>
-                <li><a href="#">Travel Tips</a></li>
-                <li><a href="#">News &amp; Features</a></li>
-                <li><a href="#">Contests</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <!-- // end header -->
-        <div class="site-bd">
+        <section class="site-bd">
+            <!--feature content -->
             <div class="row">
                 <!--carousel -->
                 <div class="seven columns">
@@ -64,117 +73,132 @@
                 </div>
                 <!-- // end carousel -->
                 <!--newsletter sign up -->
-                <section class="signUpBox three columns">
-                    <form action="#" method="post" novalidate>
-                        <div class="newsletter-icon">
-                            <img src="assets/images/envelope.png" alt="icon" />
-                            <h2>Sign Up For Our Newsletter</h2>
-                        </div>
-                        <input class="innerShadow" type="email" placeholder="user@domain.com" />
-                        <div class="optionBox innerShadow">
-                            <p class="directions">Select the newsletter you'd like to receive</p>
-                            <ul >
-                                <li class="checkBox"><input type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li>
-                                <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
-                            </ul>
-                        </div>
-                        <button type="submit" id="submit">Sign Up</button>
-                    </form >
-                    <ul class="policyBox innerShadow hList hListBlack">
-                        <li>Privacy Policy</li>
-                        <li>Terms of Use</li>
-                    </ul>
-                </section>
+                <div class="three columns">
+                    <section class="signUpBox">
+                        <form action="#" method="post" novalidate>
+                            <div class="newsletter-icon">
+                                <img src="assets/images/envelope.png" alt="icon" />
+                                <h2>Sign Up For Our Newsletter</h2>
+                            </div>
+                            <input class="innerShadow" type="email" placeholder="user@domain.com" />
+                            <div class="optionBox innerShadow">
+                                <p class="directions">Select the newsletter you'd like to receive</p>
+                                <ul >
+                                    <li class="checkBox"><input type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li>
+                                    <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
+                                </ul>
+                            </div>
+                            <button type="submit" id="submit">Sign Up</button>
+                        </form >
+                        <ul class="policyBox innerShadow hList hListBlack">
+                            <li>Privacy Policy</li>
+                            <li>Terms of Use</li>
+                        </ul>
+                    </section>
+                </div>
                 <!-- // end newsletter sign up -->
                 <!--testimonial -->
-                <section class="testimonialBox shadow three columns">
-                    <div class="pencil-icon">
-                        <img src="assets/images/pencil.png" alt="icon" />
-                        <h2>Featured Testimonial</h2>
-                    </div>
-                    <p class="quote">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
-                    <button type="submit" id="submit">Read More</button>
-                </section>
-                <!-- // end testimonial -->
+                <div class="three columns">
+                    <section class="testimonialBox shadow">
+                        <div class="pencil-icon">
+                            <img src="assets/images/pencil.png" alt="icon" />
+                            <h2>Featured Testimonial</h2>
+                        </div>
+                        <p class="quote">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
+                        <button type="submit" id="submit">Read More</button>
+                    </section>
+                </div>
+                <!-- // end testimonial -->  
             </div>
-            <!--video gallery -->
-            <div class="row ten">
-                <h3>Popular Videos</h3>
+            <!-- // end feature content -->
+            <!--video gallery -->   
+            <div class="row">
+                <div class="ten columns">
+                    <h3>Popular Videos</h3>
+                </div>
             </div>
-            <section class="row ten">
-                <ul class="gallery">
-                    <li>
-                        <div class="video">
-                            <img src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
-                            <p>Team Mongoose</p>
-                            <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="video">
-                            <img src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
-                            <p>St. Paul's Cathedral</p>
-                            <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="video">
-                            <img src="assets/video/v3-hollywood.png" alt="Hollywood"/>
-                            <p>Hollywood and Highland</p>
-                            <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="video">
-                            <img src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
-                            <p>Lake Wissota</p>
-                            <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="video">
-                            <img src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
-                            <p>The Bellagio Fountains</p>
-                            <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="video">
-                            <img src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
-                            <p>The Atlantic Coast</p>
-                            <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+            <div class="row">
+                <div class="ten columns">
+                    <ul class="gallery">
+                        <li>
+                            <div class="video">
+                                <img src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
+                                <p>Team Mongoose</p>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video">
+                                <img src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
+                                <p>St. Paul's Cathedral</p>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video">
+                                <img src="assets/video/v3-hollywood.png" alt="Hollywood"/>
+                                <p>Hollywood and Highland</p>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video">
+                                <img src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
+                                <p>Lake Wissota</p>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video">
+                                <img src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
+                                <p>The Bellagio Fountains</p>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video">
+                                <img src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
+                                <p>The Atlantic Coast</p>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <!-- // end video gallery -->
-        </div>
-        <footer class="site-ft row">
-            <div class="footer">
-                <div class="six colmns">
-                    <ul class="hList">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Site Map</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                    <br>
-                    <ul class="hList hListGrey">
-                        <li>&copy; 2013 Crispin &amp; Mulberry</li>
-                        <li>Mulberry 1640 Riverside Drive, Hill Valley, California, 95420</li>
-                    </ul>
+        </section>
+        <footer class="site-ft">
+            <div class="row">
+                <div class="footer">
+                    <!--footer nav -->
+                    <div class="six colmns">
+                        <ul class="hList">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <br>
+                        <ul class="hList hListGrey">
+                            <li>&copy; 2013 Crispin &amp; Mulberry</li>
+                            <li>Mulberry 1640 Riverside Drive, Hill Valley, California, 95420</li>
+                        </ul>
+                    </div>
+                    <!-- // end footer nav -->
+                    <!--social media links -->
+                    <div class="four colmns">
+                        <div class="socialMedia">
+                            <ul>
+                                <li class="rss"><a href="#"> </a></li>
+                                <li class="venmo"><a href="#"> </a></li>
+                                <li class="twitter"><a href="#"> </a></li>
+                                <li class="flickr"><a href="#"> </a></li>
+                                <li class="facebook"><a href="#"> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // end social media links -->
                 </div>
-                <!--social media links -->
-                <div class="socialMedia four colmns">
-                    <ul>
-                        <li class="rss"><a href="#"> </a></li>
-                        <li class="venmo"><a href="#"> </a></li>
-                        <li class="twitter"><a href="#"> </a></li>
-                        <li class="flickr"><a href="#"> </a></li>
-                        <li class="facebook"><a href="#"> </a></li>
-                    </ul>
-                </div>
-                <!-- // end social media links -->
             </div>
         </footer>
     </div>

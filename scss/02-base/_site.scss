@@ -53,10 +53,12 @@ input {
     max-width: $content-width;
     margin: auto;
     box-sizing: border-box;
+    padding: 20px;
 }
 
 .site-hd {
-    padding: 20px;
+    //background-color: red;
+    margin-bottom: 20px;
 }
 
 .site-bd {

@@ -1,15 +1,21 @@
 /* ---------------------------------------------------------------------
 Grid
 --------------------------------------------------------------------- */
-
-.row:before,
-.row:after {
+.row {
+    max-width: $content-width;
     width: 100%;
-    content: " "; 
-    display: table;
-}
-.row:after {
-    clear: both;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    
+    & :before, :after {
+        display: table;
+        content: " "; 
+    }
+    
+    & :after {
+        clear: both;
+    }
 }
 
 /* 10 column */
@@ -18,7 +24,7 @@ Grid
     width: 100%;
     float: left;
     box-sizing: border-box;
-    padding: 0 .5%;
+    padding: 0 0.5%;
 }
 .one { 
     width: 10% ;

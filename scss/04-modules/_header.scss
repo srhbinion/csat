@@ -2,19 +2,16 @@
  Header
 --------------------------------------------------------------------- */
 //T0DO: for retina display get logo font and replace png logo with SVG
-.logo{
+.logo {
     position: relative;
-    left:-30px;
-    top: -2px;
     height: 100px;
 }
 
 //T0DO: remove "margin top" for smaller breakpoints
 .userNav {
     float: right;
-    margin-top: 64px;
-    text-align: right;
-    margin-right: -19px;
+    padding-bottom: 79px;
+    margin-top: -37px;
 
     & li a {
         color: #fff;
