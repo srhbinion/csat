@@ -17,16 +17,54 @@ Sections
    margin-bottom: 0;
 }
 
+.pencil-icon {
+    position: relative;
+    border: 1px solid;
+    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
+
+    & img {
+        height: 19px;
+        padding: 0 0 4px 0;
+        margin-left: -3px;
+    }
+
+    & h2 {
+        width: 90%;
+        float: right;
+        height: 18px;
+        margin-left: -10px;
+        padding: 3px 0 4px 0;
+    }
+}
+
+.newsletter-icon {
+    position: relative;
+    border: 1px solid;
+    border-color: $brand-grey $brand-grey #4d4f52 $brand-grey;
+
+    & img {
+        height: 19px;
+        padding: 0 0 4px 0;
+        margin-left: -3px;
+    }
+
+    & h2 {
+        width: 90%;
+        float: right;
+        height: 18px;
+        margin-left: -10px;
+        padding: 3px 0 4px 0;
+    }
+}
 .optionBox {
     background-color: #c7c6c6;
     margin-bottom:10px;
     clear: both;
 }
 
-//TODO: change devider bar to black
 .policyBox {
     position: relative;
-    height: 23px;
+    height: 25px;
     clear: both;
     margin: 0px -9px;
     padding: 6px 45px;

@@ -136,8 +136,6 @@ h2 {
   font-size: 10pt;
   font-weight: 600;
   text-transform: uppercase;
-  border: 1px solid;
-  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
   margin-bottom: 12px;
 }
 
@@ -350,7 +348,46 @@ Grid
 }
 .socialMedia li {
   float: right;
-  margin-right: 10px;
+  margin-right: 2%;
+  background-image: url("/assets/images/social-media.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+.facebook {
+  background-position: 0 0;
+}
+.facebook:hover {
+  background-position: -32px 0;
+}
+
+.flickr {
+  background-position: 0 -30px;
+}
+.flickr:hover {
+  background-position: -32px -30px;
+}
+
+.twitter {
+  background-position: 0 -60px;
+}
+.twitter:hover {
+  background-position: -32px -60px;
+}
+
+.venmo {
+  background-position: 0 -90px;
+}
+.venmo:hover {
+  background-position: -32px -90px;
+}
+
+.rss {
+  background-position: 0 -120px;
+}
+.rss:hover {
+  background-position: -32px -120px;
 }
 
 /* ---------------------------------------------------------------------
@@ -379,12 +416,13 @@ Grid
 .logo {
   position: relative;
   left: -30px;
+  top: -2px;
   height: 100px;
 }
 
 .userNav {
   float: right;
-  margin-top: 65px;
+  margin-top: 64px;
   text-align: right;
   margin-right: -19px;
 }
@@ -409,7 +447,7 @@ Navigation Bar
   cursor: pointer;
 }
 .siteNav ul {
-  height: 10%;
+  height: 10.5%;
   border: 1px solid;
   border-color: #bdbdbd #cccccc;
 }
@@ -466,6 +504,42 @@ Sections
   margin-bottom: 0;
 }
 
+.pencil-icon {
+  position: relative;
+  border: 1px solid;
+  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
+}
+.pencil-icon img {
+  height: 19px;
+  padding: 0 0 4px 0;
+  margin-left: -3px;
+}
+.pencil-icon h2 {
+  width: 90%;
+  float: right;
+  height: 18px;
+  margin-left: -10px;
+  padding: 3px 0 4px 0;
+}
+
+.newsletter-icon {
+  position: relative;
+  border: 1px solid;
+  border-color: #dbdbdb #dbdbdb #4d4f52 #dbdbdb;
+}
+.newsletter-icon img {
+  height: 19px;
+  padding: 0 0 4px 0;
+  margin-left: -3px;
+}
+.newsletter-icon h2 {
+  width: 90%;
+  float: right;
+  height: 18px;
+  margin-left: -10px;
+  padding: 3px 0 4px 0;
+}
+
 .optionBox {
   background-color: #c7c6c6;
   margin-bottom: 10px;
@@ -474,7 +548,7 @@ Sections
 
 .policyBox {
   position: relative;
-  height: 23px;
+  height: 25px;
   clear: both;
   margin: 0px -9px;
   padding: 6px 45px;
@@ -508,35 +582,25 @@ Sections
 /* ---------------------------------------------------------------------
 Video Gallery
 --------------------------------------------------------------------- */
-.gallery {
-  width: 105%;
-}
-.gallery:before, .gallery:after {
-  display: table;
-  content: "";
-}
-.gallery:after {
-  clear: both;
-}
-.gallery li {
+.video {
   float: left;
-  position: inherit;
+  position: relative;
   box-sizing: border-box;
   margin-top: 7pt;
   margin-right: 21px;
-  margin-bottom: 7pt;
-  margin-left: 0px;
+  margin-bottom: 10px;
 }
-.gallery li:hover {
+.video:hover {
   color: #00527a;
   opacity: 0.6;
   filter: alpha(opacity=60);
   /* For IE8 and earlier */
 }
-.gallery a p {
-  position: absolute;
-  margin-top: -29px;
-  padding: 7px;
+.video p {
+  height: 31px;
+  margin-top: -31px;
+  padding: 12px 10px;
+  box-sizing: border-box;
   background-color: white;
   font-size: 13px;
   font-weight: 600;
@@ -545,9 +609,21 @@ Video Gallery
   /* For IE8 and earlier */
 }
 
-.playButton a {
-  background-color: red;
-  border: 1 solid red;
+.gallery {
+  width: 106%;
+}
+.gallery:before, .gallery:after {
+  display: table;
+  content: "";
+}
+.gallery:after {
+  clear: both;
+}
+
+.playButton {
+  position: absolute;
+  top: 35%;
+  left: 40%;
 }
 
 /*04-states*/
