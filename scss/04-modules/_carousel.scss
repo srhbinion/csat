@@ -3,13 +3,27 @@
 --------------------------------------------------------------------- */
 .carousel-player {
     position: relative;
-    top: 0px;
-    border: 1px solid blue;
+    height: 100%;
     
     & img {
-        height: 403px;
         width: 100%;
+        height: 100%;
     }
+}
+
+//TODO: add circle indicator bar
+.carousel-indi {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: $gutter-width 0 $gutter-width 42%;
+    box-sizing: border-box;
+}
+
+/* radio button */
+.carousel-indi input {
+    height: 18px;
+    width: 18px;
 }
 
 /* animation */
@@ -22,20 +36,4 @@
 .carousel-item_isActive {
     position: static;
     width: 100%;
-}
-
-//TODO: add arrows and circle progrss bar
-.carousel-btn {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    padding: $gutter-width 0 $gutter-width 42%;
-    box-sizing: border-box;
-    cursor: default;
-}
-
-/* radio button */
-.carousel-btn input {
-    height: 18px;
-    width: 18px;
 }

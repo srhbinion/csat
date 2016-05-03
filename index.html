@@ -3,6 +3,9 @@
 <head>
     <!-- meta data -->
     <meta charset="utf-8" />
+    <!--[if IE]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SEO -->
@@ -71,6 +74,10 @@
                             </li>
                         </ul>
                         <div class="carousel-btn">
+                            <button class="prev" alt="Previous"> ◀ </button>
+                            <button class="next" alt="Next"> ▶ </button>
+                        </div>
+                        <div class="carousel-indi">
                             <input id="carousel-item-1" type="radio" name="carousel-dots" checked>
                             <input id="carousel-item-2" type="radio" name="carousel-dots">
                             <input id="carousel-item-3" type="radio" name="carousel-dots">
@@ -95,7 +102,7 @@
                                     <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
                                 </ul>
                             </div>
-                            <button type="submit" id="submit">Sign Up</button>
+                            <button class="redirect" type="submit" id="submit">Sign Up</button>
                         </form >
                         <ul class="policyBox innerShadow hList hListBlack">
                             <li>Privacy Policy</li>
@@ -112,7 +119,7 @@
                             <h2>Featured Testimonial</h2>
                         </div>
                         <p class="testimony">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
-                        <button type="submit" id="submit">Read More</button>
+                        <button class="redirect" type="submit" id="submit">Read More</button>
                     </section>
                 </div>
                 <!-- // end testimonial -->  
@@ -126,47 +133,47 @@
             </div>
             <div class="row">
                 <div class="ten columns">
-                    <ul class="gallery">
-                        <li>
-                            <div class="video">
+                    <div class="gallery">
+                        <li class="video">
+                            <div class="video-cell">
                                 <img src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
                                 <p>Team Mongoose</p>
                                 <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li>
-                            <div class="video">
+                        <li class="video">
+                            <div class="video-cell">
                                 <img src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
                                 <p>St. Paul's Cathedral</p>
                                 <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li>
-                            <div class="video">
+                        <li class="video">
+                            <div class="video-cell">
                                 <img src="assets/video/v3-hollywood.png" alt="Hollywood"/>
                                 <p>Hollywood and Highland</p>
                                 <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li>
-                            <div class="video">
+                        <li class="video">
+                            <div class="video-cell">
                                 <img src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
                                 <p>Lake Wissota</p>
                                 <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li>
-                            <div class="video">
+                        <li class="video">
+                            <div class="video-cell">
                                 <img src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
                                 <p>The Bellagio Fountains</p>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/> 
                             </div>
                         </li>
-                        <li>
-                            <div class="video">
+                        <li class="video">
+                            <div class="video-cell">
                                 <img src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
-                                <p>The Atlantic Coast</p>
                                 <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                                <p>The Atlantic Coast</p>
                             </div>
                         </li>
                     </ul>
@@ -193,7 +200,7 @@
                     </div>
                     <!-- // end footer nav -->
                     <!--social media links -->
-                    <div class="four colmns">
+                    <div class="three colmns">
                         <div class="socialMedia">
                             <ul>
                                 <li class="rss"><a href="#"> </a></li>
