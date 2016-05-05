@@ -3,9 +3,6 @@ Videos in Gallery
 --------------------------------------------------------------------- */
 .video {
     position: relative;
-    float: left;
-    margin-right: 13px;
-    margin-bottom: 20px;   
 }
 
 .video__description {
@@ -23,8 +20,8 @@ Videos in Gallery
 }
 
 .video__playButton {
-        position: absolute;
-        left: 88px;
-        top: 55px;
-        width: 50px;
-    }
+    position: absolute;
+    left: 88px;
+    top: 55px;
+    width: 50px;
+}
