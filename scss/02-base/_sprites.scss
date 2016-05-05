@@ -1,13 +1,20 @@
 /* ---------------------------------------------------------------------
 Sprites
 --------------------------------------------------------------------- */
-.socialMedia__container li {
-    background-color: red;
-
-
+.three {
+    background-color: yellow;
 }
 
-.socialMedia {
+.row {
+    background-color: orange;
+}
+
+// .socialMedia__container {
+//     background-color: red;
+// }
+
+.socialMedia__container li {
+    position: relative;
     background-image:url("/assets/images/social-media.png");
     background-repeat: no-repeat;
     height: 27px;
@@ -17,6 +24,7 @@ Sprites
 
 .facebook {
     background-position: -1px 0;
+
 
     &:hover {
         background-position: -31px 0;  

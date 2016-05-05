@@ -318,11 +318,16 @@ button:active {
 /* ---------------------------------------------------------------------
 Sprites
 --------------------------------------------------------------------- */
-.socialMedia__container li {
-  background-color: red;
+.three {
+  background-color: yellow;
 }
 
-.socialMedia {
+.row {
+  background-color: orange;
+}
+
+.socialMedia__container li {
+  position: relative;
   background-image: url("/assets/images/social-media.png");
   background-repeat: no-repeat;
   height: 27px;
