@@ -11,11 +11,7 @@
 }
 
 //T0DO: remove "margin top" for smaller breakpoints
-.userNav {
+.nav__user-account {
     float: right;
     margin: 65px 0 35px;
-
-    & li a {
-        color: #fff;
-    }  
 }

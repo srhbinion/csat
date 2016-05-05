@@ -7,7 +7,7 @@
 /*01-vendor*/
 
 /*02-base*/
-@import "02-base/site";
+@import "02-base/text";
 @import "02-base/headings";
 @import "02-base/buttons";
 @import "02-base/sprites";
@@ -15,13 +15,15 @@
 /*03-layout*/
 @import "03-layout/grid";
 @import "03-layout/l-gallery";
+@import "03-layout/site-sections";
 
 /*04-modules*/
-@import "04-modules/footer";
-@import "04-modules/carousel";
 @import "04-modules/header";
 @import "04-modules/navbar";
-@import "04-modules/action-section";
+@import "04-modules/carousel";
+@import "04-modules/secondary-sections";
+@import "04-modules/secondary-content";
 @import "04-modules/video-gallery";
+@import "04-modules/footer";
 
 /*04-states*/

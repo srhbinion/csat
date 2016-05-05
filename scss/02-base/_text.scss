@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
- Base
+ Base - Text
 --------------------------------------------------------------------- */
 body {
     font-family: $base-font-family;
@@ -12,10 +12,15 @@ body {
 a {
     text-decoration: none;
     cursor:pointer;
+    color: #fff;
 }
 
+p {
+    font-size: 13px;
+}
+
+//not using
 h1 {
-    //not using
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: red;
@@ -32,18 +37,20 @@ h2 {
 h3 {
     background-color:$brand-blue;
     height: 35px;
-    margin: 20px 0 20px 0;
+    margin-bottom: 20px;
     padding: 12px;
     box-sizing: border-box;
     text-transform: uppercase;
     color: #fff;
 }
 
+//not using
 h4 {
     padding: 0; 
     box-sizing: border-box;
 }
 
+//not using
 h5 {
     margin: 0;
     padding: 0;     
@@ -56,31 +63,4 @@ input {
     box-sizing: border-box;
     margin-bottom:10px;
     border: 1px solid #cecece;
-}
-
-
-/* ---------------------------------------------------------------------
- Site
---------------------------------------------------------------------- */
-.site {
-    max-width: $content-width;
-    margin: auto;
-    padding: 18px 18px 0 18px;
-}
-
-.site-hd {
-    height: 152px;
-    margin-bottom: 0px;
-}
-
-.site-bd {
-    height: 850px;
-    padding: $gutter-width+2px $gutter-width/2;
-    background-color: #ffffff;
-}
-
-.site-ft {
-    height: 4em;
-    padding: $gutter-width $gutter-width/2;
-    background-color: #2c2c2c;
 }

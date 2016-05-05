@@ -4,15 +4,11 @@
 .carousel-player {
     position: relative;
     height: 100%;
-    
-    & img {
-        width: 100%;
-        height: 100%;
-    }
+    width: 100%;
 }
 
 //TODO: add circle indicator bar
-.carousel-indi {
+.carousel__indecator {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -21,7 +17,7 @@
 }
 
 /* radio button */
-.carousel-indi input {
+.carousel__indecator input {
     height: 18px;
     width: 18px;
 }

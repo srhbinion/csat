@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="site">
-        <header class="site-hd"> 
+        <header class="site__header"> 
             <!--logo row -->
             <div class="row">
                 <div class="three columns">
@@ -24,9 +24,8 @@
                         <img src="assets/images/logo.png" alt="Crispin and Mulberry logo"/>
                     </a>
                 </div>
-                
                 <div class="seven columns">
-                    <nav class="userNav">
+                    <nav class="nav__user-account">
                         <ul class="hList">
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">My Subscription</a></li>
@@ -53,7 +52,7 @@
             </div>
             <!-- // end nav bar -->
         </header>
-        <section class="site-bd">
+        <section class="site__body">
             <!--feature content -->
             <div class="row">
                 <!--carousel -->
@@ -77,7 +76,7 @@
                             <button class="button--prev" alt="Previous"> ◀ </button>
                             <button class="button--next" alt="Next"> ▶ </button>
                         </div>
-                        <div class="carousel-indi">
+                        <div class="carousel__indecator">
                             <input id="carousel-item-1" type="radio" name="carousel-dots" checked>
                             <input id="carousel-item-2" type="radio" name="carousel-dots">
                             <input id="carousel-item-3" type="radio" name="carousel-dots">
@@ -88,35 +87,35 @@
                 <!-- // end carousel -->
                 <!--newsletter sign up -->
                 <div class="three columns">
-                    <section class="signUpBox">
-                        <div class="newsletter-icon">
-                            <img src="assets/images/envelope.png" alt="icon" />
-                            <h2>Sign Up For Our Newsletter</h2>
+                    <section class="content-box">
+                        <div class="content-box__title">
+                            <img class="content-box__icon" src="assets/images/envelope.png" alt="envelope icon" />
+                            <h2 class="content-box__text">Sign Up For Our Newsletter</h2>
                         </div>
-                        <form class="newsletterEmail" action="#" method="post" novalidate>
-                            <h4><input type="email" placeholder="user@domain.com" /></h4>
-                            <div class="optionBox">
-                                <h5>Select the newsletter you'd like to receive</h5>
+                        <form class="newsletter" action="#" method="post" novalidate>
+                            <input class="newsletter__email" type="email" placeholder="user@domain.com" />
+                            <div class="newsletter__options-box">
+                                <p class="newsletter__directions">Select the newsletter you'd like to receive</p>
                                 <ul >
-                                    <li class="checkBox"><input type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li>
-                                    <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
+                                    <li class="check-box"><p><input type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</p></li>
+                                    <li class="check-box"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
                                 </ul>
                             </div>
                             <button class="button button--redirect" type="submit" id="submit">Sign Up</button>
                         </form >
-                        <ul class="policyBox innerShadow hList hListBlack">
-                            <li>Privacy Policy</li>
-                            <li>Terms of Use</li>
+                        <ul class="policy-box">
+                            <li class="policy-box__text">Privacy Policy</li>
+                            <li class="policy-box__text">Terms of Use</li>
                         </ul>
                     </section>
                 </div>
                 <!-- // end newsletter sign up -->
                 <!--testimonial -->
                 <div class="three columns">
-                    <section class="testimonialBox">
-                        <div class="pencil-icon">
-                            <img src="assets/images/pencil.png" alt="icon" />
-                            <h2>Featured Testimonial</h2>
+                    <section class="content-box">
+                        <div class="content-box__title">
+                            <img class="content-box__icon" src="assets/images/pencil.png" alt="icon" />
+                            <h2 class="content-box__text">Featured Testimonial</h2>
                         </div>
                         <p class="testimony">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
                         <button class="button button--redirect" type="submit" id="submit">Read More</button>
@@ -167,7 +166,7 @@
                                 <img class="video__img" src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
                                 <p class="video__description">The Bellagio Fountains</p>
                                 <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/> 
-                            </di
+                            </div>
                         </li>
                         <li class="l-gallery__item">
                             <div class="video">
@@ -181,7 +180,7 @@
             </div>
             <!-- // end video gallery -->
         </section>
-        <footer class="site-ft">
+        <footer class="site__footer">
             <div class="footer">
                     <!--footer nav -->
                 <div class="row">

@@ -1,0 +1,89 @@
+/* ---------------------------------------------------------------------
+Secondary Content
+--------------------------------------------------------------------- */
+/* Newsletter Box */
+
+/* Email Input */
+.newsletter {
+    margin-top: $gutter-width/2;
+}
+.newsletter input {
+    border: 1px solid $brand-md-grey;
+    -moz-box-shadow: inset 0 0 7px $brand-md-grey;
+    -webkit-box-shadow: inset 0 0 7px $brand-md-grey;
+    box-shadow: inset 0 0 7px $brand-md-grey;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Email Input Options */
+.newsletter__options-box {
+    background-color: $brand-box-grey;
+    height: 58px;
+    padding: $gutter-width/2;
+    margin-bottom: 6px;
+}
+
+.newsletter__directions{
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: $gutter-width/2;
+}
+
+.check-box {
+    font-weight:600;
+    margin-top: -2px;
+
+    & input {
+        width: 10px;
+        margin-right: $gutter-width/2;
+    }
+}
+
+/* Email Policy */
+.policy-box {
+    position: relative;
+    height: 24px;
+    bottom: -4px;
+    margin-left: -$gutter-width/2;
+    margin-right: -$gutter-width/2;
+    border: 1px solid;
+    border-color: $brand-dk-grey $brand-box-grey $brand-box-grey $brand-box-grey;
+    background-color: $brand-box-grey;
+}
+
+.policy-box__text {
+    float: left;
+    position: relative;
+    font-size: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 7px;
+    margin-left: 25px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    //TODO: Why does this not show up on ie8?
+    &:nth-child(2):before {
+        position: absolute;
+        top: 50%;
+        left: -12px;
+        content: "";
+        height: 14px;
+        width: 1px;
+        margin-top: -4px;
+        background-color: #000;
+    }
+}
+
+/* Testimonial Box */
+.testimony {
+    height: 101px;
+    font-family: $base-font-family;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
