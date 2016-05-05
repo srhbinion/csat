@@ -26,7 +26,7 @@
                 </div>
                 
                 <div class="seven columns">
-                    <nav class="userNav">
+                    <nav class="">
                         <ul class="hList">
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">My Subscription</a></li>
@@ -74,8 +74,8 @@
                             </li>
                         </ul>
                         <div class="carousel-btn">
-                            <button class="prev" alt="Previous"> ◀ </button>
-                            <button class="next" alt="Next"> ▶ </button>
+                            <button class="button--prev" alt="Previous"> ◀ </button>
+                            <button class="button--next" alt="Next"> ▶ </button>
                         </div>
                         <div class="carousel-indi">
                             <input id="carousel-item-1" type="radio" name="carousel-dots" checked>
@@ -102,7 +102,7 @@
                                     <li class="checkBox"><input type="checkbox" name="newsletter" value="Tips">Weekly Travel Tips</li>
                                 </ul>
                             </div>
-                            <button class="redirect" type="submit" id="submit">Sign Up</button>
+                            <button class="button button--redirect" type="submit" id="submit">Sign Up</button>
                         </form >
                         <ul class="policyBox innerShadow hList hListBlack">
                             <li>Privacy Policy</li>
@@ -119,7 +119,7 @@
                             <h2>Featured Testimonial</h2>
                         </div>
                         <p class="testimony">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
-                        <button class="redirect" type="submit" id="submit">Read More</button>
+                        <button class="button button--redirect" type="submit" id="submit">Read More</button>
                     </section>
                 </div>
                 <!-- // end testimonial -->  
@@ -133,47 +133,47 @@
             </div>
             <div class="row">
                 <div class="ten columns">
-                    <div class="gallery">
-                        <li class="video">
-                            <div class="video-cell">
-                                <img src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
-                                <p>Team Mongoose</p>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                    <ul class="l-gallery">
+                        <li class="l-gallery__item">
+                            <div class="video">
+                                <img class="video__img" src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
+                                <p class="video__description">Team Mongoose</p>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li class="video">
-                            <div class="video-cell">
-                                <img src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
-                                <p>St. Paul's Cathedral</p>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                        <li class="l-gallery__item">
+                            <div class="video">
+                                <img class="video__img" src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
+                                <p class="video__description">St. Paul's Cathedral</p>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li class="video">
-                            <div class="video-cell">
-                                <img src="assets/video/v3-hollywood.png" alt="Hollywood"/>
-                                <p>Hollywood and Highland</p>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                        <li class="l-gallery__item">
+                            <div class="video">
+                                <img class="video__img" src="assets/video/v3-hollywood.png" alt="Hollywood"/>
+                                <p class="video__description">Hollywood and Highland</p>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li class="video">
-                            <div class="video-cell">
-                                <img src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
-                                <p>Lake Wissota</p>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
+                        <li class="l-gallery__item">
+                            <div class="video">
+                                <img class="video__img" src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
+                                <p class="video__description">Lake Wissota</p>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
                             </div>
                         </li>
-                        <li class="video">
-                            <div class="video-cell">
-                                <img src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
-                                <p>The Bellagio Fountains</p>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/> 
-                            </div>
+                        <li class="l-gallery__item">
+                            <div class="video">
+                                <img class="video__img" src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
+                                <p class="video__description">The Bellagio Fountains</p>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/> 
+                            </di
                         </li>
-                        <li class="video">
-                            <div class="video-cell">
-                                <img src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
-                                <img class="playButton" src="assets/images/play-button.png" alt="play button"/>
-                                <p>The Atlantic Coast</p>
+                        <li class="l-gallery__item">
+                            <div class="video">
+                                <img class="video__img" src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
+                                <p class="video__description">The Atlantic Coast</p>
+                                <img class="video__playButton"  src="assets/images/play-button.png" alt="play button"/> 
                             </div>
                         </li>
                     </ul>
@@ -201,13 +201,13 @@
                     <!-- // end footer nav -->
                     <!--social media links -->
                     <div class="three colmns">
-                        <div class="socialMedia">
-                            <ul>
-                                <li class="rss"><a href="#"> </a></li>
-                                <li class="venmo"><a href="#"> </a></li>
-                                <li class="twitter"><a href="#"> </a></li>
-                                <li class="flickr"><a href="#"> </a></li>
-                                <li class="facebook"><a href="#"> </a></li>
+                        <div class="socialMedia__container">
+                            <ul class="socialMedia">
+                                <li class="socialMedia rss"><a href="#"> </a></li>
+                                <li class="socialMedia venmo"><a href="#"> </a></li>
+                                <li class="socialMedia twitter"><a href="#"> </a></li>
+                                <li class="socialMedia flickr"><a href="#"> </a></li>
+                                <li class="socialMedia facebook"><a href="#"> </a></li>
                             </ul>
                         </div>
                     </div>
