@@ -12,14 +12,25 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
-    padding: $gutter-width 0 $gutter-width 42%;
+    padding: $gutter-width/10 0 $gutter-width/10 42%;
     box-sizing: border-box;
 }
 
 /* radio button */
-.carousel__indecator input {
-    height: 18px;
-    width: 18px;
+.carousel__indecator li {
+    height: 2%;
+    width: 5%;
+    color: #fff;
+    font-size: 50px;
+    float: left;
+    margin:1px;
+    font-weight: bold;
+    //Note does not work with ie 8
+    text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
+
+    &.active {
+        color: $brand-blue;
+    }
 }
 
 /* animation */
@@ -32,5 +43,4 @@
 .carousel-item_isActive {
     position: static;
     width: 100%;
-    border: 1px solid red;
 }

@@ -6,13 +6,17 @@ body {
     font-size: $base-font-size;
     background-color: $background-color;
     color: $brand-dk-grey;
-    cursor:pointer;
 }
 
 a {
     text-decoration: none;
     cursor:pointer;
     color: #fff;
+    cursor:pointer;
+}
+
+li {
+    cursor:pointer;
 }
 
 p {
@@ -63,4 +67,9 @@ input {
     box-sizing: border-box;
     margin-bottom:10px;
     border: 1px solid #cecece;
+}
+
+span.sr-only {
+    display: none;
+    visibility: none; 
 }

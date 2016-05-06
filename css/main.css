@@ -125,13 +125,17 @@ body {
   font-size: 13px;
   background-color: #00527a;
   color: #2c2c2c;
-  cursor: pointer;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
   color: #fff;
+  cursor: pointer;
+}
+
+li {
+  cursor: pointer;
 }
 
 p {
@@ -179,6 +183,11 @@ input {
   box-sizing: border-box;
   margin-bottom: 10px;
   border: 1px solid #cecece;
+}
+
+span.sr-only {
+  display: none;
+  visibility: none;
 }
 
 /* ---------------------------------------------------------------------
@@ -577,14 +586,23 @@ Navigation Bar
   position: absolute;
   bottom: 0px;
   width: 100%;
-  padding: 20px 0 20px 42%;
+  padding: 2px 0 2px 42%;
   box-sizing: border-box;
 }
 
 /* radio button */
-.carousel__indecator input {
-  height: 18px;
-  width: 18px;
+.carousel__indecator li {
+  height: 2%;
+  width: 5%;
+  color: #fff;
+  font-size: 50px;
+  float: left;
+  margin: 1px;
+  font-weight: bold;
+  text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
+}
+.carousel__indecator li.active {
+  color: #0084d9;
 }
 
 /* animation */
@@ -597,7 +615,6 @@ Navigation Bar
 .carousel-item_isActive {
   position: static;
   width: 100%;
-  border: 1px solid red;
 }
 
 /* ---------------------------------------------------------------------
