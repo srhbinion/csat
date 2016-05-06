@@ -25,6 +25,8 @@ $(function() {
     var CLASSES = {
         ACTIVE_SLIDE_CLASS: 'carousel-item_isActive',
         INACTIVE_SLIDE_CLASS: 'carousel-item_isInactive',
+        ACTIVE_INDI_CLASS: 'carousel__indecator--active',
+        INACTIVE_INDI_CLASS: 'carousel__indecator--inactive'
     };
 
     /**
@@ -36,6 +38,7 @@ $(function() {
      */
     var SELECTORS = {
         CAROUSEL_ID: '#js-carousel',
+        INDI_ID: "js-indecator",
         PLAYER_ID: "#js-player",
         NEXT_ID: "#js-player--next",
         PREV_ID: "#js-player--prev"
@@ -79,6 +82,16 @@ $(function() {
          */
         this.$currentSlide = null;
 
+         /**
+         * A reference to the current carousel indicator
+         *
+         * @default null
+         * @property $currentIndi
+         * @type {jQuery}
+         * @public
+         */
+        this.$currentIndi = null;
+
         /**
          * The current index of the active slide
          *
@@ -97,7 +110,7 @@ $(function() {
          * @type {Number}
          * @public
          */
-        this.numSlides = 0;
+        this.numSlides = 4;
 
         /**
          * The number of slides that exist in the carousel
@@ -151,9 +164,9 @@ $(function() {
         this.handleCarouselMouseEnter = $.proxy(this.onCarouselMouseEnter, this);
         this.handleCarouselMouseLeave = $.proxy(this.onCarouselMouseLeave, this);
         //NEXT SARAH 
-        this.handleMouseClickNext = $.proxy(this.goToNextSlide, this);
+        this.handleMouseDownNext = $.proxy(this.goToNextSlide, this);
         //PREV SARAH
-        this.handleMouseClickPrev = $.proxy(this.goToPreviousSlide, this);
+        this.handleMouseDownPrev = $.proxy(this.goToPreviousSlide, this);
 
 
         return this;
@@ -168,23 +181,38 @@ $(function() {
      * @chainable
      */
     Carousel.prototype.createChildren = function() {
+        //slide
         this.$carousel = $(SELECTORS.CAROUSEL_ID);
         this.$slides = this.$carousel.children();
         this.$currentSlide = this.$slides.eq(this.currentIndex);
+
+        //indicator
+        this.$progress = $(SELECTORS.INDI_ID);
+        this.$indi = this.$progress.children();
+        this.$currentIndi = this.$indi.eq(this.currentIndex);
         
-        //NEXT SARAH
+        // Touches js-player--next id tag --SARAH
         this.$next = $(SELECTORS.NEXT_ID);
-        //PREV SARAH
+        // Touches js-player--prev id tag --SARAH
         this.$prev = $(SELECTORS.PREV_ID);
 
         // Count the slides
         this.numSlides = this.$slides.length;
 
+        // Count the indi
+        this.numIndi = this.$indi.length;
+
         // Make first slide active
         this.$currentSlide.addClass(CLASSES.ACTIVE_SLIDE_CLASS);
 
+
+
         // Make all slides but the first inactive
         this.$slides.not(this.$currentSlide).addClass(CLASSES.INACTIVE_SLIDE_CLASS);
+        //TODO Make first indi active
+        this.$currentIndi.addClass(CLASSES.ACTIVE_INDI_CLASS);
+        // Make all indi but the first inactive
+        this.$indi.not(this.$currentIndi).addClass(CLASSES.INACTIVE_INDI_CLASS);
 
         return this;
     };
@@ -205,9 +233,9 @@ $(function() {
         this.$carousel.on('mouseenter', this.handleCarouselMouseEnter);
         this.$carousel.on('mouseleave', this.handleCarouselMouseLeave);
         //SARAH NEXT
-        this.$next.on('mousedown', this.handleMouseClickNext);
+        this.$next.on('mousedown', this.handleMouseDownNext);
         //SARAH PREV
-        this.$prev.on('mousedown', this.handleMouseClickPrev);
+        this.$prev.on('mousedown', this.handleMouseDownPrev);
 
         this.isEnabled = true;
 
@@ -230,9 +258,9 @@ $(function() {
         this.$carousel.off('mouseenter', this.handleCarouselMouseEnter);
         this.$carousel.off('mouseleave', this.handleCarouselMouseLeave);
         //SARAH NEXT
-        this.$next.off('mouseup', this.handleMouseClickNext);
+        this.$next.off('mouseup', this.handleMouseDownNext);
         //SARAH PREV
-        this.$prev.on('mousedown', this.handleMouseClickPrev);
+        this.$prev.off('mousedown', this.handleMouseDownPrev);
 
         this.isEnabled = false;
 
@@ -279,9 +307,8 @@ $(function() {
     Carousel.prototype.goToNextSlide = function() {
         this.goToSlide(this.currentIndex + 1);
 
-        //NEXT SARAH
-        window.console.log("NEXT! Next...Got it!");
-        window.console.log(SELECTORS.NEXT_ID);
+        //NEXT SARAH - delete
+        window.console.log("Go TO Next");
 
         return this;
     };
@@ -296,9 +323,8 @@ $(function() {
     Carousel.prototype.goToPreviousSlide = function() {
         this.goToSlide(this.currentIndex - 1);
 
-         //PREV SARAH
-        window.console.log("PREV! ...Got it!");
-        window.console.log(SELECTORS.PREV_ID);
+         //PREV SARAH TODO - delete
+        window.console.log("Go To Prev");
 
         return this;
     };
@@ -329,6 +355,9 @@ $(function() {
             .addClass(CLASSES.ACTIVE_SLIDE_CLASS);
 
         this.currentIndex = index;
+
+        window.console.log("current index = " + this.currentIndex);
+        
 
         return this;
     };

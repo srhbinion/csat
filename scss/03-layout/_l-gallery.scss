@@ -16,8 +16,9 @@ Video Gallery
 .l-gallery__item {
     float: left;
     list-style: none;
-    margin-right: 20px;
     margin-bottom: 20px;
+    margin-right: 20px; 
+    box-sizing: border-box;
     width: 225px;
     height:170px;
 

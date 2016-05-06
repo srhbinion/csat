@@ -435,8 +435,9 @@ Video Gallery
 .l-gallery__item {
   float: left;
   list-style: none;
-  margin-right: 20px;
   margin-bottom: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
   width: 225px;
   height: 170px;
 }
@@ -528,7 +529,8 @@ Navigation Bar
   float: left;
   color: #c7c6c6;
   height: 38px;
-  padding: 13px 38px;
+  padding: 13px 36px;
+  margin-left: 3px;
   box-sizing: border-box;
   /* active state*/
 }
@@ -545,8 +547,6 @@ Navigation Bar
 }
 .nav__primary li:active {
   background: #fff;
-  border: 2px solid;
-  border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
 }
 .nav__primary li:last-child {
   float: right;
@@ -556,13 +556,13 @@ Navigation Bar
 }
 .nav__primary li:nth-child(4) {
   background: #fff;
+  margin-top: -5px;
   border: 2px solid;
   border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
   padding-top: 15px;
   padding-right: 40px;
   padding-left: 41px;
-  padding-bottom: 12px;
-  margin-top: -5px;
+  margin-bottom: 12px;
 }
 
 .nav__primary li a {
@@ -590,8 +590,30 @@ Navigation Bar
   box-sizing: border-box;
 }
 
-/* radio button */
-.carousel__indecator li {
+/* indecator */
+.carousel__indecator-item {
+  float: left;
+  margin: 1px;
+  height: 2%;
+  width: 5%;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
+}
+
+.carousel__indecator-item--active {
+  height: 2%;
+  width: 5%;
+  color: #0084d9;
+  font-size: 50px;
+  float: left;
+  margin: 1px;
+  font-weight: bold;
+  text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
+}
+
+.carousel__indecator-item--inactive {
   height: 2%;
   width: 5%;
   color: #fff;
@@ -600,9 +622,6 @@ Navigation Bar
   margin: 1px;
   font-weight: bold;
   text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
-}
-.carousel__indecator li.active {
-  color: #0084d9;
 }
 
 /* animation */

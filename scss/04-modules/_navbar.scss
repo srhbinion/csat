@@ -12,7 +12,8 @@ Navigation Bar
     float: left;
     color: $brand-box-grey;
     height: 38px;
-    padding: 13px 38px;
+    padding: 13px 36px;
+    margin-left: 3px;
     box-sizing: border-box;
 
     &:hover {
@@ -25,8 +26,6 @@ Navigation Bar
 
     &:active {
         background: #fff;
-        border: 2px solid;
-        border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
     }
 
     &:last-child {
@@ -39,13 +38,14 @@ Navigation Bar
     /* active state*/
     &:nth-child(4) {
         background: #fff;
+        margin-top: -5px;
         border: 2px solid;
         border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
         padding-top: 15px;
         padding-right: 40px;
         padding-left: 41px;
-        padding-bottom: 12px;
-        margin-top: -5px;
+        margin-bottom:12px;
+        
     }
 }
 .nav__primary li a {

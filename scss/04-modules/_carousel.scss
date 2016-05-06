@@ -16,8 +16,36 @@
     box-sizing: border-box;
 }
 
-/* radio button */
-.carousel__indecator li {
+/* indecator */
+.carousel__indecator-item {
+    float: left;
+    margin:1px;
+    height: 2%;
+    width: 5%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    //Note does not work with ie8
+    text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
+
+//     &.active {
+//         color: $brand-blue;
+//     }
+}
+
+.carousel__indecator-item--active {
+    height: 2%;
+    width: 5%;
+    color: $brand-blue;
+    font-size: 50px;
+    float: left;
+    margin:1px;
+    font-weight: bold;
+    //Note does not work with ie 8
+    text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
+}
+
+.carousel__indecator-item--inactive {
     height: 2%;
     width: 5%;
     color: #fff;
@@ -27,10 +55,6 @@
     font-weight: bold;
     //Note does not work with ie 8
     text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
-
-    &.active {
-        color: $brand-blue;
-    }
 }
 
 /* animation */
