@@ -597,6 +597,7 @@ Navigation Bar
 .carousel-item_isActive {
   position: static;
   width: 100%;
+  border: 1px solid red;
 }
 
 /* ---------------------------------------------------------------------

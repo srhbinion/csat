@@ -24,7 +24,7 @@ $(function() {
      */
     var CLASSES = {
         ACTIVE_SLIDE_CLASS: 'carousel-item_isActive',
-        INACTIVE_SLIDE_CLASS: 'carousel-item_isInactive'
+        INACTIVE_SLIDE_CLASS: 'carousel-item_isInactive',
     };
 
     /**
@@ -35,7 +35,10 @@ $(function() {
      * @final
      */
     var SELECTORS = {
-        CAROUSEL_ID: '#js-carousel'
+        CAROUSEL_ID: '#js-carousel',
+        PLAYER_ID: "#js-player",
+        NEXT_ID: "#js-player--next",
+        PREV_ID: "#js-player--prev"
     };
 
     /**
@@ -147,6 +150,11 @@ $(function() {
     Carousel.prototype.setupHandlers = function() {
         this.handleCarouselMouseEnter = $.proxy(this.onCarouselMouseEnter, this);
         this.handleCarouselMouseLeave = $.proxy(this.onCarouselMouseLeave, this);
+        //NEXT SARAH 
+        this.handleMouseClickNext = $.proxy(this.goToNextSlide, this);
+        //PREV SARAH
+        this.handleMouseClickPrev = $.proxy(this.goToPreviousSlide, this);
+
 
         return this;
     };
@@ -163,6 +171,11 @@ $(function() {
         this.$carousel = $(SELECTORS.CAROUSEL_ID);
         this.$slides = this.$carousel.children();
         this.$currentSlide = this.$slides.eq(this.currentIndex);
+        
+        //NEXT SARAH
+        this.$next = $(SELECTORS.NEXT_ID);
+        //PREV SARAH
+        this.$prev = $(SELECTORS.PREV_ID);
 
         // Count the slides
         this.numSlides = this.$slides.length;
@@ -191,6 +204,10 @@ $(function() {
 
         this.$carousel.on('mouseenter', this.handleCarouselMouseEnter);
         this.$carousel.on('mouseleave', this.handleCarouselMouseLeave);
+        //SARAH NEXT
+        this.$next.on('mousedown', this.handleMouseClickNext);
+        //SARAH PREV
+        this.$prev.on('mousedown', this.handleMouseClickPrev);
 
         this.isEnabled = true;
 
@@ -212,6 +229,10 @@ $(function() {
 
         this.$carousel.off('mouseenter', this.handleCarouselMouseEnter);
         this.$carousel.off('mouseleave', this.handleCarouselMouseLeave);
+        //SARAH NEXT
+        this.$next.off('mouseup', this.handleMouseClickNext);
+        //SARAH PREV
+        this.$prev.on('mousedown', this.handleMouseClickPrev);
 
         this.isEnabled = false;
 
@@ -258,6 +279,10 @@ $(function() {
     Carousel.prototype.goToNextSlide = function() {
         this.goToSlide(this.currentIndex + 1);
 
+        //NEXT SARAH
+        window.console.log("NEXT! Next...Got it!");
+        window.console.log(SELECTORS.NEXT_ID);
+
         return this;
     };
 
@@ -270,6 +295,10 @@ $(function() {
      */
     Carousel.prototype.goToPreviousSlide = function() {
         this.goToSlide(this.currentIndex - 1);
+
+         //PREV SARAH
+        window.console.log("PREV! ...Got it!");
+        window.console.log(SELECTORS.PREV_ID);
 
         return this;
     };
