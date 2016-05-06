@@ -51,7 +51,6 @@ Secondary Content
     border-color: $brand-dk-grey $brand-box-grey $brand-box-grey $brand-box-grey;
     background-color: $brand-box-grey;
 }
-
 .policy-box__text {
     float: left;
     position: relative;
@@ -65,7 +64,7 @@ Secondary Content
         text-decoration: underline;
     }
 
-    //TODO: Why does this not show up on ie8?
+    //TODO: Why does the verical line not show up on ie8?
     &:nth-child(2):before {
         position: absolute;
         top: 50%;
