@@ -461,13 +461,13 @@ Video Gallery
   margin-top: 5px;
   background-color: #cccccc;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#fcfcfc, #d2d2d2);
+  background: -webkit-linear-gradient(#fefefe, #c7c6c6);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#fcfcfc, #d2d2d2);
+  background: -o-linear-gradient(#fefefe, #c7c6c6);
   /*For Opera 11.1 to 12.0*/
-  background: -moz-linear-gradient(#fcfcfc, #d2d2d2);
+  background: -moz-linear-gradient(#fefefe, #c7c6c6);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#fcfcfc, #d2d2d2);
+  background: linear-gradient(#fefefe, #c7c6c6);
   /* Standard syntax */
 }
 
@@ -521,11 +521,7 @@ Navigation Bar
   height: 38px;
   padding: 13px 38px;
   box-sizing: border-box;
-}
-.nav__primary li:last-child {
-  float: right;
-  padding: 13px 37px;
-  box-sizing: border-box;
+  /* active state*/
 }
 .nav__primary li:hover {
   background-color: #bdbdbd;
@@ -537,6 +533,27 @@ Navigation Bar
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#e1e3e6, #bdbdbd);
   /* Standard syntax */
+}
+.nav__primary li:active {
+  background: #fff;
+  border: 2px solid;
+  border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
+}
+.nav__primary li:last-child {
+  float: right;
+  padding: 13px 37px;
+  box-sizing: border-box;
+  margin-top: -5px 0;
+}
+.nav__primary li:nth-child(4) {
+  background: #fff;
+  border: 2px solid;
+  border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
+  padding-top: 15px;
+  padding-right: 42px;
+  padding-left: 41px;
+  padding-bottom: 5px;
+  margin-top: -5px;
 }
 
 .nav__primary li a {

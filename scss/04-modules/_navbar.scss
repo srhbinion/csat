@@ -15,18 +15,37 @@ Navigation Bar
     padding: 13px 38px;
     box-sizing: border-box;
 
-    &:last-child {
-        float: right;
-        padding: 13px 37px;
-        box-sizing: border-box;
-    }
-
     &:hover {
         background-color: #bdbdbd;
         background: -webkit-linear-gradient(#e1e3e6,#bdbdbd); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(#e1e3e6,#bdbdbd); /* For Opera 11.1 to 12.0 */
         background: -moz-linear-gradient(#e1e3e6,#bdbdbd); /* For Firefox 3.6 to 15 */
         background: linear-gradient(#e1e3e6,#bdbdbd); /* Standard syntax */
+    }
+
+    &:active {
+        background: #fff;
+        border: 2px solid;
+        border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
+    }
+
+    &:last-child {
+        float: right;
+        padding: 13px 37px;
+        box-sizing: border-box;
+        margin-top: -5px 0;
+    }
+
+    /* active state*/
+    &:nth-child(4) {
+        background: #fff;
+        border: 2px solid;
+        border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
+        padding-top: 15px;
+        padding-right: 42px;
+        padding-left: 41px;
+        padding-bottom: 5px;
+        margin-top: -5px;
     }
 }
 .nav__primary li a {
@@ -36,24 +55,3 @@ Navigation Bar
     font-size: 13px;
     text-shadow: 1px 1px #fff;
 }
-
-
-    //     /* Active Tab State - makes site look like comp */
-    //     &:nth-child(4n) {
-    //         background: #fff;
-    //         margin: -4px -2px -15px -2px;
-    //         padding-bottom: 12px;
-    //         padding-top: 1.6%;
-    //         border: 2px solid;
-    //         border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
-    //     }
-        
-    //     /* Active Tab State - tiggers on click */
-    //     /* &:active {
-    //         background: #fff;
-    //         margin: -4px -2px -15px -2px;
-    //         padding-bottom: 14px;
-    //         border: 2px solid;
-    //         border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
-    //     } */
-    // }
