@@ -23,10 +23,10 @@ $(function() {
      * @final
      */
     var CLASSES = {
-        ACTIVE_SLIDE_CLASS: 'carousel-item_isActive',
-        INACTIVE_SLIDE_CLASS: 'carousel-item_isInactive',
-        ACTIVE_INDI_CLASS: 'carousel__indecator--active',
-        INACTIVE_INDI_CLASS: 'carousel__indecator--inactive'
+        ACTIVE_SLIDE_CLASS: "carousel-item_isActive",
+        INACTIVE_SLIDE_CLASS: "carousel-item_isInactive",
+        ACTIVE_INDI_CLASS: "carousel__indecator-item--active",
+        INACTIVE_INDI_CLASS: "carousel__indecator-item--inactive"
     };
 
     /**
@@ -37,8 +37,8 @@ $(function() {
      * @final
      */
     var SELECTORS = {
-        CAROUSEL_ID: '#js-carousel',
-        INDI_ID: "js-indecator",
+        CAROUSEL_ID: "#js-carousel",
+        INDI_ID: "#js-indecator",
         PLAYER_ID: "#js-player",
         NEXT_ID: "#js-player--next",
         PREV_ID: "#js-player--prev"
@@ -82,8 +82,38 @@ $(function() {
          */
         this.$currentSlide = null;
 
-         /**
-         * A reference to the current carousel indicator
+        /**
+         * The number of slides that exist in the carousel
+         *
+         * @default 0
+         * @property numSlides
+         * @type {Number}
+         * @public
+         */
+        this.numSlides = 0;
+
+        /**
+         * A reference to the indecator progress bar
+         *
+         * @default null
+         * @property $progress
+         * @type {jQuery}
+         * @public
+         */
+        this.$progress = null;
+
+        /**
+         * A reference to the indecator circles
+         *
+         * @default null
+         * @property $indi
+         * @type {jQuery}
+         * @public
+         */
+        this.$indi = null;
+
+        /**
+         * A reference to the current indecator circle
          *
          * @default null
          * @property $currentIndi
@@ -93,6 +123,16 @@ $(function() {
         this.$currentIndi = null;
 
         /**
+         * The number of slides that exist in the carousel
+         *
+         * @default 0
+         * @property numSlides
+         * @type {Number}
+         * @public
+         */
+        this.numIndi = 0;
+
+         /**
          * The current index of the active slide
          *
          * @default 0
@@ -101,16 +141,6 @@ $(function() {
          * @public
          */
         this.currentIndex = 0;
-
-        /**
-         * The number of slides that exist in the carousel
-         *
-         * @default 0
-         * @property numSlides
-         * @type {Number}
-         * @public
-         */
-        this.numSlides = 4;
 
         /**
          * The number of slides that exist in the carousel
@@ -168,6 +198,9 @@ $(function() {
         //PREV SARAH
         this.handleMouseDownPrev = $.proxy(this.goToPreviousSlide, this);
 
+        //Indi SARAH 
+        this.handleToggle = $.proxy(this.goToNextSlide, this);
+
 
         return this;
     };
@@ -185,38 +218,38 @@ $(function() {
         this.$carousel = $(SELECTORS.CAROUSEL_ID);
         this.$slides = this.$carousel.children();
         this.$currentSlide = this.$slides.eq(this.currentIndex);
+        
+        // Count the slides
+        this.numSlides = this.$slides.length;
 
-        //indicator
+        // Make first slide active
+        this.$currentSlide.addClass(CLASSES.ACTIVE_SLIDE_CLASS);
+        // Make all slides but the first inactive
+        this.$slides.not(this.$currentSlide).addClass(CLASSES.INACTIVE_SLIDE_CLASS);
+
+        //Indicator
         this.$progress = $(SELECTORS.INDI_ID);
         this.$indi = this.$progress.children();
         this.$currentIndi = this.$indi.eq(this.currentIndex);
+
+        //Make first indi active
+        this.$currentIndi.addClass(CLASSES.ACTIVE_INDI_CLASS);
+        // Make all indi but the first inactive
+        this.$indi.not(this.$currentIndi).addClass(CLASSES.INACTIVE_INDI_CLASS);
+
+        // Count the indi
+        this.numIndi = this.$indi.length;
         
         // Touches js-player--next id tag --SARAH
         this.$next = $(SELECTORS.NEXT_ID);
         // Touches js-player--prev id tag --SARAH
         this.$prev = $(SELECTORS.PREV_ID);
 
-        // Count the slides
-        this.numSlides = this.$slides.length;
-
-        // Count the indi
-        this.numIndi = this.$indi.length;
-
-        // Make first slide active
-        this.$currentSlide.addClass(CLASSES.ACTIVE_SLIDE_CLASS);
-
-
-
-        // Make all slides but the first inactive
-        this.$slides.not(this.$currentSlide).addClass(CLASSES.INACTIVE_SLIDE_CLASS);
-        //TODO Make first indi active
-        this.$currentIndi.addClass(CLASSES.ACTIVE_INDI_CLASS);
-        // Make all indi but the first inactive
-        this.$indi.not(this.$currentIndi).addClass(CLASSES.INACTIVE_INDI_CLASS);
-
         return this;
     };
 
+    window.console.log(this.numIndi);
+    window.console.log(this.$currentIndi);
     /**
      * Enables the component
      * Performs any event binding to handlers
@@ -232,6 +265,7 @@ $(function() {
 
         this.$carousel.on('mouseenter', this.handleCarouselMouseEnter);
         this.$carousel.on('mouseleave', this.handleCarouselMouseLeave);
+
         //SARAH NEXT
         this.$next.on('mousedown', this.handleMouseDownNext);
         //SARAH PREV
@@ -257,6 +291,7 @@ $(function() {
 
         this.$carousel.off('mouseenter', this.handleCarouselMouseEnter);
         this.$carousel.off('mouseleave', this.handleCarouselMouseLeave);
+
         //SARAH NEXT
         this.$next.off('mouseup', this.handleMouseDownNext);
         //SARAH PREV
@@ -280,6 +315,8 @@ $(function() {
         this.timer = setInterval(function() {
             self.goToNextSlide();
         }, TIMING.INTERVAL);
+        
+        window.console.log("Start Slides!");
 
         return this;
     };
@@ -293,7 +330,9 @@ $(function() {
      */
     Carousel.prototype.stopSlideshow = function() {
         clearInterval(this.timer);
-
+        
+        window.console.log("ALL CLEAR!");
+        
         return this;
     };
 
@@ -306,25 +345,30 @@ $(function() {
      */
     Carousel.prototype.goToNextSlide = function() {
         this.goToSlide(this.currentIndex + 1);
+        this.goToIndi(this.currentIndex);
 
         //NEXT SARAH - delete
-        window.console.log("Go TO Next");
-
+        window.console.log("=====BREAK======");
+        window.console.log("goToNextSlide: Current index = " + (this.currentIndex));
+        window.console.log( this.$slides);
+         window.console.log("=====INDI======");
+        window.console.log( this.$indi);
         return this;
     };
 
     /**
      * Go back to the previous slide
      *
-     * @method gotoNextSlide
+     * @method goToPreviousSlide
      * @public
      * @chainable
      */
     Carousel.prototype.goToPreviousSlide = function() {
         this.goToSlide(this.currentIndex - 1);
+        this.goToIndi(this.currentIndex);
 
          //PREV SARAH TODO - delete
-        window.console.log("Go To Prev");
+        window.console.log("goToPreviousSlide Current index = " + (this.currentIndex));
 
         return this;
     };
@@ -356,7 +400,40 @@ $(function() {
 
         this.currentIndex = index;
 
-        window.console.log("current index = " + this.currentIndex);
+        window.console.log("goToSlide: current index = " + this.currentIndex);
+        
+
+        return this;
+    };
+
+  /**
+     * Go to a specific slide
+     *
+     * @method goToSlide
+     * @public
+     * @param {Number} index of the target slide
+     * @chainable
+     */
+    Carousel.prototype.goToIndi = function(index) {
+        if (index >= this.numIndi) {
+            index = 0;
+        } else if (index < 0) {
+            index = this.numIndi - 1;
+        }
+
+        this.$currentIndi
+            .removeClass(CLASSES.ACTIVE_INDI_CLASS)
+            .addClass(CLASSES.INACTIVE_INDI_CLASS);
+
+        this.$currentIndi = this.$indi.eq(index);
+
+        this.$currentIndi
+            .removeClass(CLASSES.INACTIVE_INDI_CLASS)
+            .addClass(CLASSES.ACTIVE_INDI_CLASS);
+
+        this.currentIndex = index;
+
+        window.console.log("yep");
         
 
         return this;
