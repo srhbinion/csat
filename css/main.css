@@ -312,11 +312,11 @@ Sprites
   background-repeat: no-repeat;
   height: 27px;
   width: 27px;
-  margin-right: 8px;
 }
 
 .facebook {
   background-position: -1px 0;
+  margin-right: 8px;
 }
 .facebook:hover {
   background-position: -31px 0;
@@ -324,6 +324,7 @@ Sprites
 
 .flickr {
   background-position: -1px -30px;
+  margin-right: 8px;
 }
 .flickr:hover {
   background-position: -31px -30px;
@@ -331,6 +332,7 @@ Sprites
 
 .twitter {
   background-position: -1px -60px;
+  margin-right: 8px;
 }
 .twitter:hover {
   background-position: -31px -60px;
@@ -338,6 +340,7 @@ Sprites
 
 .venmo {
   background-position: 0px -90px;
+  margin-right: 8px;
 }
 .venmo:hover {
   background-position: -30px -90px;
@@ -519,9 +522,10 @@ Video Gallery
 Navigation Bar
 --------------------------------------------------------------------- */
 .nav__primary {
-  border: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
   height: 38px;
-  border-color: #7b7a7a #fefefe;
+  border-color: #c1bfbf #fefefe;
 }
 
 .nav__primary li {
@@ -530,9 +534,9 @@ Navigation Bar
   color: #c7c6c6;
   height: 38px;
   padding: 13px 36px;
-  margin-left: 3px;
+  margin-left: 2px;
   box-sizing: border-box;
-  /* active state*/
+  /* active state does not show up in ie8*/
 }
 .nav__primary li:hover {
   background-color: #bdbdbd;
@@ -547,22 +551,29 @@ Navigation Bar
 }
 .nav__primary li:active {
   background: #fff;
+  margin-top: -5px;
+  margin-left: 2px;
+  padding-top: 16px;
+  padding-bottom: 26px;
+  padding-right: 25px;
+  padding-left: 41px;
+  height: 20px;
+  border: 1px solid #c1bfbf;
+  border-bottom: 1px solid #fff;
 }
 .nav__primary li:last-child {
   float: right;
-  padding: 13px 37px;
-  box-sizing: border-box;
-  margin-top: -5px 0;
 }
 .nav__primary li:nth-child(4) {
   background: #fff;
   margin-top: -5px;
-  border: 2px solid;
-  border-color: #d2d2d2 #d2d2d2 #fff #d2d2d2;
-  padding-top: 15px;
+  padding-top: 16px;
+  padding-bottom: 26px;
   padding-right: 40px;
   padding-left: 41px;
-  margin-bottom: 12px;
+  height: 20px;
+  border: 1px solid #c1bfbf;
+  border-bottom: 1px solid #fff;
 }
 
 .nav__primary li a {

@@ -7,12 +7,11 @@ Sprites
     background-repeat: no-repeat;
     height: 27px;
     width: 27px;
-    margin-right: 8px;
 }
 
 .facebook {
     background-position: -1px 0;
-
+    margin-right: 8px;
 
     &:hover {
         background-position: -31px 0;  
@@ -21,6 +20,7 @@ Sprites
 
 .flickr {
     background-position: -1px -30px;
+    margin-right: 8px;
 
     &:hover {
         background-position: -31px -30px;  
@@ -29,6 +29,7 @@ Sprites
 
 .twitter {
     background-position: -1px -60px;
+    margin-right: 8px;
 
     &:hover {
         background-position: -31px -60px;  
@@ -37,6 +38,7 @@ Sprites
 
 .venmo {
     background-position: 0px -90px;
+    margin-right: 8px;
 
     &:hover {
         background-position: -30px -90px;  
