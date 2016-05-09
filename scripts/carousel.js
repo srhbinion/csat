@@ -38,7 +38,9 @@ $(function() {
      */
     var SELECTORS = {
         CAROUSEL_ID: "#js-carousel",
+        //Indecator
         INDI_ID: "#js-indecator",
+        //Next and Prev
         PLAYER_ID: "#js-player",
         NEXT_ID: "#js-player--next",
         PREV_ID: "#js-player--prev"
@@ -103,7 +105,7 @@ $(function() {
         this.$progress = null;
 
         /**
-         * A reference to the indecator circles
+         * A reference to the indecator progress circles
          *
          * @default null
          * @property $indi
@@ -123,10 +125,10 @@ $(function() {
         this.$currentIndi = null;
 
         /**
-         * The number of slides that exist in the carousel
+         * The number of indicators that exist in the progress bar
          *
          * @default 0
-         * @property numSlides
+         * @property numIndi
          * @type {Number}
          * @public
          */
@@ -191,16 +193,13 @@ $(function() {
      * @chainable
      */
     Carousel.prototype.setupHandlers = function() {
+        // Binds the hover event mouse over event
         this.handleCarouselMouseEnter = $.proxy(this.onCarouselMouseEnter, this);
         this.handleCarouselMouseLeave = $.proxy(this.onCarouselMouseLeave, this);
-        //NEXT SARAH 
-        this.handleMouseDownNext = $.proxy(this.goToNextSlide, this);
-        //PREV SARAH
-        this.handleMouseDownPrev = $.proxy(this.goToPreviousSlide, this);
 
-        //Indi SARAH 
-        this.handleToggle = $.proxy(this.goToNextSlide, this);
-
+        // Binds the progress to the next and prev event on mousedown on next button
+        this.handleMouseDownNext = $.proxy(this.onMouseDownNext, this);
+        this.handleMouseDownPrev = $.proxy(this.onMouseDownPrev, this);
 
         return this;
     };
@@ -214,42 +213,40 @@ $(function() {
      * @chainable
      */
     Carousel.prototype.createChildren = function() {
-        //slide
+        // Slide and children
         this.$carousel = $(SELECTORS.CAROUSEL_ID);
         this.$slides = this.$carousel.children();
-        this.$currentSlide = this.$slides.eq(this.currentIndex);
         
         // Count the slides
         this.numSlides = this.$slides.length;
+        this.$currentSlide = this.$slides.eq(this.currentIndex);
 
         // Make first slide active
         this.$currentSlide.addClass(CLASSES.ACTIVE_SLIDE_CLASS);
         // Make all slides but the first inactive
         this.$slides.not(this.$currentSlide).addClass(CLASSES.INACTIVE_SLIDE_CLASS);
 
-        //Indicator
+        //Indicator and children
         this.$progress = $(SELECTORS.INDI_ID);
         this.$indi = this.$progress.children();
+
+        // Counts the indi
+        this.numIndi = this.$indi.length;
         this.$currentIndi = this.$indi.eq(this.currentIndex);
 
-        //Make first indi active
+        // Makes first indi active
         this.$currentIndi.addClass(CLASSES.ACTIVE_INDI_CLASS);
-        // Make all indi but the first inactive
+        // Makes all indi but the first inactive
         this.$indi.not(this.$currentIndi).addClass(CLASSES.INACTIVE_INDI_CLASS);
 
-        // Count the indi
-        this.numIndi = this.$indi.length;
-        
-        // Touches js-player--next id tag --SARAH
+        // Touches js-player--next id tag
         this.$next = $(SELECTORS.NEXT_ID);
-        // Touches js-player--prev id tag --SARAH
+        // Touches js-player--prev id tag
         this.$prev = $(SELECTORS.PREV_ID);
 
         return this;
     };
 
-    window.console.log(this.numIndi);
-    window.console.log(this.$currentIndi);
     /**
      * Enables the component
      * Performs any event binding to handlers
@@ -262,14 +259,13 @@ $(function() {
         if (this.isEnabled) {
             return this;
         }
+        // Directs the mouse enter and leave event to the event handler
+        this.$carousel.on("mouseenter", this.handleCarouselMouseEnter);
+        this.$carousel.on("mouseleave", this.handleCarouselMouseLeave);
 
-        this.$carousel.on('mouseenter', this.handleCarouselMouseEnter);
-        this.$carousel.on('mouseleave', this.handleCarouselMouseLeave);
-
-        //SARAH NEXT
-        this.$next.on('mousedown', this.handleMouseDownNext);
-        //SARAH PREV
-        this.$prev.on('mousedown', this.handleMouseDownPrev);
+        // Directs the mousedown on Prev and Next to the event handler
+        this.$next.on("mousedown", this.handleMouseDownNext);
+        this.$prev.on("mousedown", this.handleMouseDownPrev);
 
         this.isEnabled = true;
 
@@ -288,14 +284,13 @@ $(function() {
         if (!this.isEnabled) {
             return this;
         }
+        // Directs the mouse enter and leave event to the event handler
+        this.$carousel.off("mouseenter", this.handleCarouselMouseEnter);
+        this.$carousel.off("mouseleave", this.handleCarouselMouseLeave);
 
-        this.$carousel.off('mouseenter', this.handleCarouselMouseEnter);
-        this.$carousel.off('mouseleave', this.handleCarouselMouseLeave);
-
-        //SARAH NEXT
-        this.$next.off('mouseup', this.handleMouseDownNext);
-        //SARAH PREV
-        this.$prev.off('mousedown', this.handleMouseDownPrev);
+        // Disables the mouse enter and leave event to the event handler
+        this.$next.off("mousedown", this.handleMouseDownNext);
+        this.$prev.off("mousedown", this.handleMouseDownPrev);
 
         this.isEnabled = false;
 
@@ -315,8 +310,6 @@ $(function() {
         this.timer = setInterval(function() {
             self.goToNextSlide();
         }, TIMING.INTERVAL);
-        
-        window.console.log("Start Slides!");
 
         return this;
     };
@@ -330,8 +323,6 @@ $(function() {
      */
     Carousel.prototype.stopSlideshow = function() {
         clearInterval(this.timer);
-        
-        window.console.log("ALL CLEAR!");
         
         return this;
     };
@@ -347,12 +338,6 @@ $(function() {
         this.goToSlide(this.currentIndex + 1);
         this.goToIndi(this.currentIndex);
 
-        //NEXT SARAH - delete
-        window.console.log("=====BREAK======");
-        window.console.log("goToNextSlide: Current index = " + (this.currentIndex));
-        window.console.log( this.$slides);
-         window.console.log("=====INDI======");
-        window.console.log( this.$indi);
         return this;
     };
 
@@ -366,9 +351,6 @@ $(function() {
     Carousel.prototype.goToPreviousSlide = function() {
         this.goToSlide(this.currentIndex - 1);
         this.goToIndi(this.currentIndex);
-
-         //PREV SARAH TODO - delete
-        window.console.log("goToPreviousSlide Current index = " + (this.currentIndex));
 
         return this;
     };
@@ -400,18 +382,15 @@ $(function() {
 
         this.currentIndex = index;
 
-        window.console.log("goToSlide: current index = " + this.currentIndex);
-        
-
         return this;
     };
 
   /**
-     * Go to a specific slide
+     * Go to a specific indicator
      *
-     * @method goToSlide
+     * @method goToIndi
      * @public
-     * @param {Number} index of the target slide
+     * @param {Number} index of the target indicator
      * @chainable
      */
     Carousel.prototype.goToIndi = function(index) {
@@ -432,10 +411,7 @@ $(function() {
             .addClass(CLASSES.ACTIVE_INDI_CLASS);
 
         this.currentIndex = index;
-
-        window.console.log("yep");
         
-
         return this;
     };
 
@@ -461,6 +437,26 @@ $(function() {
      */
     Carousel.prototype.onCarouselMouseLeave = function(e) {
         this.startSlideshow();
+    };
+
+    /**
+     * Advances the next slide in the slideshow on mousedown
+     * @method onMouseDownNext
+     * @public
+     * @param {Object} event The event object
+     */
+    Carousel.prototype.onMouseDownNext = function(e) {
+        this.goToNextSlide();
+    };
+
+    /**
+     * Reverts to the most recent past slide in the slideshow on mousedown
+     * @method onMouseDownPrev
+     * @public
+     * @param {Object} event The event object
+     */
+    Carousel.prototype.onMouseDownPrev = function(e) {
+        this.goToPreviousSlide();
     };
 
     return new Carousel();
