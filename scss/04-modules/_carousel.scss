@@ -7,36 +7,19 @@
     width: 100%;
 }
 
-//TODO:DELETE?
 .carousel__indecator {
     position: absolute;
     bottom: 0px;
     width: 100%;
-    padding: $gutter-width/10 0 $gutter-width/10 42%;
+    padding: 0% 0% 1% 44%;
     box-sizing: border-box;
-}
-
-//TODO:DELETE?
-.carousel__indecator-item {
-    float: left;
-    margin:1px;
-    height: 2%;
-    width: 5%;
-    color: #fff;
-    font-size: 50px;
-    font-weight: bold;
-    //Note does not work with ie8
-    text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
-
-//     &.active {
-//         color: $brand-blue;
 }
 
 .carousel__indecator-item--active {
     height: 2%;
     width: 5%;
     color: $brand-blue;
-    font-size: 50px;
+    font-size: 36px;
     float: left;
     margin:1px;
     font-weight: bold;
@@ -48,11 +31,11 @@
     height: 2%;
     width: 5%;
     color: #fff;
-    font-size: 50px;
+    font-size: 36px;
     float: left;
     margin:1px;
     font-weight: bold;
-    //Note does not work with ie 8
+    //note: Text Shadow does not work with ie 8
     text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
 }
 

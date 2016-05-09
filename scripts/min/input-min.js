@@ -1,0 +1,1 @@
+$(document).ready(function(){$('input[type="checkbox"]').each(function(){this.checked&&$(this).next().addClass("Checked")})});
