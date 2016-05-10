@@ -2,18 +2,26 @@
 Sections
 --------------------------------------------------------------------- */
 /* Seconary Content Box */
-.content-box {
+.content-box-one {
     background-color: $brand-grey;
     width: 100%;
-    padding: 4px $gutter-width/2;
+    padding: 2px $gutter-width/2;
     box-sizing: border-box;
     margin-bottom: $gutter-width;
+}
+
+.content-box-two {
+    background-color: $brand-grey;
+    width: 100%;
+    padding: 5px $gutter-width/2;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .content-box__title {
     position: relative;
     float: left;
-    height: 25px;
+    height: 28px;
     width: 100%;
     margin-bottom: 8px;
     border: 1px solid;

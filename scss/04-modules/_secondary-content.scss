@@ -7,81 +7,74 @@ Secondary Content
 .newsletter {
     margin-top: $gutter-width/2;
 }
-.newsletter input {
+.newsletter__email input {
+    position: relative;
+    width: 100%;
+    padding: 5px 6px;
+    box-sizing: border-box;
     border: 1px solid $brand-md-grey;
+    box-shadow: inset 0 0 7px $brand-md-grey;
     -moz-box-shadow: inset 0 0 7px $brand-md-grey;
     -webkit-box-shadow: inset 0 0 7px $brand-md-grey;
-    box-shadow: inset 0 0 7px $brand-md-grey;
     font-size: 12px;
     font-style: italic;
     margin-top: 2px;
+    margin-bottom: 10px;
 }
 
 /* Email Input Options */
 .newsletter__options-box {
     background-color: $brand-box-grey;
-    height: 58px;
+    height: 52px;
     padding: $gutter-width/2;
-    margin-bottom: 6px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.newsletter__options-box li {
+    margin-left: -5px;
+    font-weight: 600;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .newsletter__directions{
     font-size: 12px;
     font-style: italic;
-    padding-bottom: $gutter-width/2;
+    padding-bottom: 5px;
 }
 
 .check-box {
-    font-weight:600;
-    margin-top: -2px;
-
-    & input {
-        width: 10px;
-        margin-right: $gutter-width/2;
-    }
+    width: 25px;
 }
 
 /* Email Policy */
 .policy-box {
     position: relative;
     height: 24px;
-    bottom: -4px;
     margin-left: -$gutter-width/2;
     margin-right: -$gutter-width/2;
-    border: 1px solid;
-    border-color: $brand-dk-grey $brand-box-grey $brand-box-grey $brand-box-grey;
+    border-top: 1px solid $brand-dk-grey;
     background-color: $brand-box-grey;
+    padding-left: 20px;
 }
 
 .policy-box__text {
-    float: left;
-    position: relative;
     font-size: 12px;
-    padding-top: 7px;
-    margin-left: 48px;
+    margin-left: 25px;
+    margin-right: 0px;
+    margin-top: 6px;
 
     &:hover {
         text-decoration: underline;
-    }
-
-    //TODO: Why does the verical line not show up on ie8?
-    &:nth-child(2):before {
-        position: absolute;
-        top: 50%;
-        left: -25px;
-        content: "";
-        height: 14px;
-        width: 1px;
-        margin-top: -4px;
-        background-color: #000;
     }
 }
 
 /* Testimonial Box */
 .testimony {
-    height: 101px;
     font-family: $base-font-family;
-    line-height: 1.5;
+    line-height: 1.3;
     font-size: 14px;
-    margin-top: 4px;
+    margin-top: 9px;
+    height: 97px;
 }
