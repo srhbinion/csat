@@ -3,7 +3,7 @@
 <head>
     <!-- meta data -->
     <meta charset="utf-8" />
-    <!--[if IE]>
+    <!--[if IE]> /* Converts HTML5 element to be read in IE8 */
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
@@ -14,9 +14,9 @@
     <!-- stylesheet -->
     <link rel="stylesheet" media="screen, projection" href="css/main.css" type="text/css"/>
 </head>
-<body>
+<body role="main">
     <div class="site">
-        <header class="site__header"> 
+        <header class="site__header" role="banner"> 
             <!--logo row -->
             <div class="row">
                 <div class="three columns">
@@ -25,7 +25,7 @@
                     </a>
                 </div>    
                 <div class="seven columns">
-                    <nav class="nav__user-account">
+                    <nav class="nav__user-account" role="navigation">
                         <ul class="hList">
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">My Subscription</a></li>
@@ -37,7 +37,7 @@
             <!-- // end logo row-->
         </header>
         <!--nav bar -->
-        <nav class="site__nav">
+        <nav class="site__nav" role="navigation">
             <ul class="nav__primary">
                 <li><a href="#">Destinations</a></li>
                 <li><a href="#">Getaways</a></li>
@@ -48,7 +48,7 @@
             </ul>
         </nav>
         <!-- // end nav bar -->
-        <section class="site__body">
+        <section class="site__body" role="main">
             <!--feature content -->
             <div class="row">
                 <!--carousel -->
@@ -56,16 +56,16 @@
                     <div class="carousel-player">
                         <ul class="carousel" id="js-carousel">
                             <li class="carousel-item">
-                                <img src="assets/images/sub.jpg" alt="USS Torsk submarine in Baltimore" />
+                                <img src="assets/images/sub.png" alt="USS Torsk submarine Baltimore" />
                             </li>
                             <li class="carousel-item">
-                                <img src="assets/images/venetian.jpg" alt="Venetian gondola in Italy" />
+                                <img src="assets/images/venetian.png" alt="Venetian gondola in Venice" />
                             </li>
                             <li class="carousel-item">
-                                <img src="assets/images/london.jpg" alt="Westminster Abbey in London" />
+                                <img src="assets/images/london.png" alt="Westminster Abbey in London" />
                             </li>
                             <li class="carousel-item">
-                                <img src="assets/images/rushmore.jpg" alt="Mount Rushmore National Memorial in Keystone" />
+                                <img src="assets/images/rushmore.png" alt="Mount Rushmore National Memorial in Keystone" />
                             </li>
                         </ul>
                         <div class="carousel-btn" id="js-player">
@@ -85,31 +85,29 @@
                 <div class="three columns">
                     <section class="content-box-one">
                         <div class="content-box__title">
-                            <img class="content-box__icon" src="assets/images/envelope.png" alt="envelope icon" />
+                            <img class="content-box__icon" src="assets/images/envelope.png" alt="icon" />
                             <h2 class="content-box__text">Sign Up For Our Newsletter</h2>
                         </div>
                         <form class="newsletter" action="#" method="post" novalidate>
                             <div class="newsletter__email">
-                                <input type="email" placeholder="user@domain.com" />
+                                <label for="email" class="isVisuallyHidden">Email</label>
+                                <input type="email" id="email" placeholder="user@domain.com" />
                             </div>    
                             <div class="newsletter__options-box">
                                 <p class="newsletter__directions">Select the newsletter you'd like to receive</p>
                                 <ul class="checkbox-holder">
-                                    <li><input class="check-box" type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li>
-                                    <li><input class="check-box" type="checkbox">Weekly Travel Tips</li>
+                                    <label for="question"><li><input class="check-box" type="checkbox" name="newsletter" value="Contests">Destinations &amp; Getaways</li></label>
+                                    <label for="question"><li><input class="check-box" type="checkbox">Weekly Travel Tips</li></label>
                                 </ul>
                             </div>
-                            <button class="button button--redirect" type="submit" id="submit">Sign Up</button>
+                            <button class="button button--redirect" type="submit" role="button" id="submit">Sign Up</button>
                         </form >
-                       <!--TODO: make show up on ie8  <div > -->
-                            <!--class="hList hListGrey"-->
                             <div class="policy-box">
                                 <ul class="hList hListBlack">
                                     <li class="policy-box__text">Privacy Policy</li>
                                     <li class="policy-box__text">Terms of Use</li>
                                 </ul>
                             </div>
-                      <!--   </div> -->
                     </section>
                 </div>
                 <!-- // end newsletter sign up -->
@@ -121,7 +119,7 @@
                             <h2 class="content-box__text">Featured Testimonial</h2>
                         </div>
                         <p class="testimony">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...”</p>
-                        <button class="button button--redirect" type="submit" id="submit">Read More</button>
+                        <button class="button button--redirect" role="button" type="submit" id="submit">Read More</button>
                     </section>
                 </div>
                 <!-- // end testimonial -->  
@@ -136,46 +134,46 @@
             <div class="row">
                 <div class="ten columns">
                     <ul class="l-gallery">
-                        <li class="l-gallery__item">
+                        <li class="l-gallery__item" role="complementary">
                             <div class="video">
-                                <img class="video__img" src="assets/video/v1-team-mongoose.png" alt="Mongoose dirt bike race"/>
+                                <img class="video__img" src="assets/video/v1-team-mongoose.png" alt=""/>
                                 <p class="video__description">Team Mongoose</p>
-                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt=""/>
                             </div>
                         </li>
                         <li class="l-gallery__item">
                             <div class="video">
-                                <img class="video__img" src="assets/video/v2-st-paul.png" alt="Saint Paul's Cathedral"/>
+                                <img class="video__img" src="assets/video/v2-st-paul.png" alt="St Paul"/>
                                 <p class="video__description">St. Paul's Cathedral</p>
-                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="submit"/>
                             </div>
                         </li>
                         <li class="l-gallery__item">
                             <div class="video">
                                 <img class="video__img" src="assets/video/v3-hollywood.png" alt="Hollywood"/>
                                 <p class="video__description">Hollywood and Highland</p>
-                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="submit"/>
                             </div>
                         </li>
                         <li class="l-gallery__item">
                             <div class="video">
-                                <img class="video__img" src="assets/video/v4-lake-wissota.png" alt="A lake up north"/>
+                                <img class="video__img" src="assets/video/v4-lake-wissota.png" alt="Lake Wissota"/>
                                 <p class="video__description">Lake Wissota</p>
-                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/>
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="submit"/>
                             </div>
                         </li>
                         <li class="l-gallery__item">
                             <div class="video">
-                                <img class="video__img" src="assets/video/v5-bellagio-fountain.png" alt="Las Vegas fountain"/>
+                                <img class="video__img" src="assets/video/v5-bellagio-fountain.png" alt="Bellagio Fountain"/>
                                 <p class="video__description">The Bellagio Fountains</p>
-                                <img class="video__playButton" src="assets/images/play-button.png" alt="play button"/> 
+                                <img class="video__playButton" src="assets/images/play-button.png" alt="submit"/> 
                             </div>
                         </li>
                         <li class="l-gallery__item">
                             <div class="video">
-                                <img class="video__img" src="assets/video/v6-atlantic-coast.png" alt="East coast beach"/>
+                                <img class="video__img" src="assets/video/v6-atlantic-coast.png" alt="Atlantic Coast"/>
                                 <p class="video__description">The Atlantic Coast</p>
-                                <img class="video__playButton"  src="assets/images/play-button.png" alt="play button"/> 
+                                <img class="video__playButton"  src="assets/images/play-button.png" alt="submit"/> 
                             </div>
                         </li>
                     </ul>
@@ -183,12 +181,12 @@
             </div>
             <!-- // end video gallery -->
         </section>
-        <footer class="site__footer">
+        <footer class="site__footer" role="contentinfo">
             <div class="footer">
                     <!--footer nav -->
                 <div class="row">
                     <div class="seven columns">
-                        <ul class="hList">
+                        <ul class="hList" role="navigation">
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Use</a></li>
                             <li><a href="#">Site Map</a></li>

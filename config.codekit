@@ -13,6 +13,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/left-arrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1688,
+		"inputAbbreviatedPath": "\/assets\/images\/left-arrow.png",
+		"outputAbbreviatedPath": "\/assets\/images\/left-arrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -24,13 +35,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/london.jpg": {
-		"fileType": 16384,
+	"\/assets\/images\/london.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 69930,
-		"inputAbbreviatedPath": "\/assets\/images\/london.jpg",
-		"outputAbbreviatedPath": "\/assets\/images\/london.jpg",
+		"initialSize": 389203,
+		"inputAbbreviatedPath": "\/assets\/images\/london.png",
+		"outputAbbreviatedPath": "\/assets\/images\/london.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -57,13 +68,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/rushmore.jpg": {
-		"fileType": 16384,
+	"\/assets\/images\/right-arrow.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 112640,
-		"inputAbbreviatedPath": "\/assets\/images\/rushmore.jpg",
-		"outputAbbreviatedPath": "\/assets\/images\/rushmore.jpg",
+		"initialSize": 1634,
+		"inputAbbreviatedPath": "\/assets\/images\/right-arrow.png",
+		"outputAbbreviatedPath": "\/assets\/images\/right-arrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/rushmore.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 607883,
+		"inputAbbreviatedPath": "\/assets\/images\/rushmore.png",
+		"outputAbbreviatedPath": "\/assets\/images\/rushmore.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -79,24 +101,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/sub.jpg": {
-		"fileType": 16384,
+	"\/assets\/images\/sub.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 63847,
-		"inputAbbreviatedPath": "\/assets\/images\/sub.jpg",
-		"outputAbbreviatedPath": "\/assets\/images\/sub.jpg",
+		"initialSize": 432761,
+		"inputAbbreviatedPath": "\/assets\/images\/sub.png",
+		"outputAbbreviatedPath": "\/assets\/images\/sub.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/venetian.jpg": {
-		"fileType": 16384,
+	"\/assets\/images\/venetian.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 87868,
-		"inputAbbreviatedPath": "\/assets\/images\/venetian.jpg",
-		"outputAbbreviatedPath": "\/assets\/images\/venetian.jpg",
+		"initialSize": 502437,
+		"inputAbbreviatedPath": "\/assets\/images\/venetian.png",
+		"outputAbbreviatedPath": "\/assets\/images\/venetian.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -181,6 +203,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
