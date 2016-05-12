@@ -5,7 +5,6 @@ Video Gallery
     width: 100%;
     height:100%;
 
-    /* TODO: for a smaller screen make turn float to left */
     :nth-child(4) {
         margin-right: 0px;
         float:right;
@@ -22,9 +21,8 @@ Video Gallery
     width: 225px;
     height:170px;
 
-    // TODO: ie8 why is the hover hanging out high and to the left? 
     &:hover {
-        background-color: white;
+        background-color: #fff;
         opacity: 0.6;
         filter: alpha(opacity=60); /* For IE8 and earlier */
     }

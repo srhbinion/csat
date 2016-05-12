@@ -14,39 +14,3 @@
     padding: 0% 0% 1% 44%;
     box-sizing: border-box;
 }
-
-.carousel__indecator-item--active {
-    height: 2%;
-    width: 5%;
-    color: $brand-blue;
-    font-size: 36px;
-    float: left;
-    margin:1px;
-    font-weight: bold;
-    //Note does not work with ie 8
-    text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
-}
-
-.carousel__indecator-item--inactive {
-    height: 2%;
-    width: 5%;
-    color: #fff;
-    font-size: 36px;
-    float: left;
-    margin:1px;
-    font-weight: bold;
-    //note: Text Shadow does not work with ie 8
-    text-shadow: -1px 0px 3px #000, 0 0 0 #fff, -1px 0px 3px #000;
-}
-
-/* animation */
-.carousel-item_isInactive {
-    position: absolute;
-    left: -9999px;
-    line-height: 0;
-}
-
-.carousel-item_isActive {
-    position: static;
-    width: 100%;
-}

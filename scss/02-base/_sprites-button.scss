@@ -1,0 +1,19 @@
+/* ---------------------------------------------------------------------
+Carousel Button Sprites
+--------------------------------------------------------------------- */
+.button__container {
+    float: right;
+    background-image: url("/assets/images/social-media.png");
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    height: 27px;
+    width: 27px;
+    
+    &:hover {
+        background-position: -31px 0;  
+    }
+    
+    &:active {
+        background-position: -31px 0;  
+    }
+}

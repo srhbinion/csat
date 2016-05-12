@@ -10,7 +10,8 @@
 @import "02-base/text";
 @import "02-base/headings";
 @import "02-base/buttons";
-@import "02-base/sprites";
+@import "02-base/sprites-button";
+@import "02-base/sprites-social";
 
 /*03-layout*/
 @import "03-layout/grid";
@@ -26,4 +27,6 @@
 @import "04-modules/video-gallery";
 @import "04-modules/footer";
 
-/*04-states*/
+/*05-states*/
+@import "05-states/carousel-actions";
+@import "05-states/hidden";
