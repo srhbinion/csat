@@ -5,37 +5,37 @@ Carousel Button Sprites
 .button--prev, .button--next {
     position: absolute;
     background-image: url("/assets/images/button-next-prev.png");
-    top: 45%;
+    top: 181px;
     height: 40px;
     width: 40px;
 }
 
 .button--prev {
     left:0;
-    background-position: 0px 0px;
+    background-position: -1px -1px;
 
     &:hover {
-        background-position: 0px -40px;
+        background-position: -1px -41px;
 
     }
 
     &:active {
-        background-position: 0px -80px;
+        background-position: -01px -81px;
 
     }
 }
 
 .button--next {
     right:0;
-    background-position: -40px 0px;
+    background-position: -39px -1px;
 
     &:hover {
-        background-position: -40px -40px;
+        background-position: -39px -41px;
 
     }
 
     &:active {
-        background-position: -40px -80px;
+        background-position: -39px -81px;
 
     }
 } 

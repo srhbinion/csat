@@ -6,12 +6,13 @@
     position: relative;
     height: 85px;
     width: 275px;
-    margin-left: -4px;
+    margin-top: 10px;
+    margin-left: -10px;
     margin-bottom: 28px;
 }
 
 //T0DO: remove "margin top" for smaller breakpoints
 .nav__user-account {
     float: right;
-    margin: 65px 0 35px;
+    margin: 76px -10px 20px 0;
 }

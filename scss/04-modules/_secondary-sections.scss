@@ -2,7 +2,8 @@
 Sections
 --------------------------------------------------------------------- */
 /* Seconary Content Box */
-.content-box-one {
+.content-box-news, .content-box-test {
+    position: relative;
     background-color: $brand-grey;
     width: 100%;
     padding: 2px $gutter-width/2;
@@ -10,32 +11,24 @@ Sections
     margin-bottom: $gutter-width;
 }
 
-.content-box-two {
-    background-color: $brand-grey;
-    width: 100%;
-    padding: 5px $gutter-width/2;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
 .content-box__title {
-    position: relative;
     float: left;
-    height: 28px;
+    height: 25px;
     width: 100%;
-    margin-bottom: 8px;
+    padding-top: 4px;
+    margin-bottom: 4px;
     border: 1px solid;
-    border-color: $brand-grey $brand-grey $brand-dk-grey $brand-grey;
+    border-color: $brand-grey $brand-grey #969696 $brand-grey;
 }
 
 .content-box__icon {
     float: left;
-    margin-right: $gutter-width/2;
+    margin-right: 6px;
     margin-left: -3px;
-    height: $gutter-width;
-    width: $gutter-width;
+    height: 19px;
+    width: 19px;
 }
 
 .content-box__text {
-    padding-top: 5px;
+    padding-top: 4px;
 }

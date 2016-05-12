@@ -6,10 +6,12 @@ Secondary Content
 /* Email Input */
 .newsletter {
     margin-top: $gutter-width/2;
+    height: 213px;
 }
 .newsletter__email input {
-    position: relative;
     width: 100%;
+    margin-top: 6px;
+    margin-bottom: 10px;
     padding: 5px 6px;
     box-sizing: border-box;
     border: 1px solid $brand-md-grey;
@@ -18,8 +20,7 @@ Secondary Content
     -webkit-box-shadow: inset 0 0 7px $brand-md-grey;
     font-size: 12px;
     font-style: italic;
-    margin-top: 2px;
-    margin-bottom: 10px;
+
 }
 
 /* Email Input Options */
@@ -28,7 +29,14 @@ Secondary Content
     height: 52px;
     padding: $gutter-width/2;
     padding-bottom: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    box-shadow: inset 0 0 7px $brand-md-grey;
+    -moz-box-shadow: inset 0 0 7px $brand-md-grey;
+    -webkit-box-shadow: inset 0 0 7px $brand-md-grey;
+}
+
+.check-box {
+    width: 25px;
 }
 
 .newsletter__options-box li {
@@ -44,37 +52,34 @@ Secondary Content
     padding-bottom: 5px;
 }
 
-.check-box {
-    width: 25px;
-}
-
 /* Email Policy */
 .policy-box {
-    position: relative;
-    height: 24px;
-    margin-left: -$gutter-width/2;
-    margin-right: -$gutter-width/2;
-    border-top: 1px solid $brand-dk-grey;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
     background-color: $brand-box-grey;
-    padding-left: 20px;
+    height: 25px;
+    border-top: 1px solid #969696;
+    padding: 1px 26px;
 }
 
 .policy-box__text {
     font-size: 12px;
-    margin-left: 25px;
-    margin-right: 0px;
-    margin-top: 6px;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    margin-left: 26px;
+    margin-top: 5px;
 }
 
 /* Testimonial Box */
+.content-box-test {
+    height: 156px;
+}
+
 .testimony {
     font-family: $base-font-family;
     line-height: 1.3;
     font-size: 14px;
-    margin-top: 9px;
-    height: 97px;
+    margin-top: 38px;
+    margin-bottom: 16px;
 }

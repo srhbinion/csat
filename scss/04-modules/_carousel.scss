@@ -5,11 +5,12 @@
     position: relative;
     height: 100%;
     width: 100%;
+    margin-bottom: $gutter-width/2;
 }
 
 .carousel__indecator {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     padding: 0% 0% 1% 44%;
     box-sizing: border-box;

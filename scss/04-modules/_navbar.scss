@@ -9,13 +9,13 @@ Navigation Bar
 }
 
 .nav__primary li {
-    position: relative;
     float: left;
     color: $brand-box-grey;
     height: 38px;
-    padding: 13px 36px;
-    margin-left: 2px;
+    padding: 13px 32px;
+    margin-left: 4px;
     box-sizing: border-box;
+    letter-spacing: 1px;
 
     &:hover {
         background-color: #bdbdbd;
@@ -46,10 +46,11 @@ Navigation Bar
     &:nth-child(4) {
         background: #fff;
         margin-top: -5px;
+        margin-left: -2px;
         padding-top: 16px;
         padding-bottom: 26px;
-        padding-right: 40px;
-        padding-left: 41px;
+        padding-right: 36px;
+        padding-left: 28px;
         height: 20px;
         border: 1px solid #c1bfbf;
         border-bottom: 1px solid #fff;
