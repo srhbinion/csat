@@ -258,50 +258,38 @@ button:active {
   box-sizing: border-box;
 }
 
+/* ---------------------------------------------------------------------
+Carousel Button Sprites
+--------------------------------------------------------------------- */
 /* player */
 .button--prev, .button--next {
   position: absolute;
+  background-image: url("/assets/images/button-next-prev.png");
   top: 45%;
-  padding: 4px;
   height: 40px;
   width: 40px;
-  font-size: 20px;
-}
-.button--prev:hover, .button--next:hover {
-  color: #fff;
-  background-color: #00527a;
-  border: 1px solid #00527a;
-}
-.button--prev:active, .button--next:active {
-  color: #0084d9;
-  background-color: #fff;
-  border: 1px solid #00527a;
 }
 
 .button--prev {
   left: 0;
+  background-position: 0px 0px;
+}
+.button--prev:hover {
+  background-position: 0px -40px;
+}
+.button--prev:active {
+  background-position: 0px -80px;
 }
 
 .button--next {
   right: 0;
+  background-position: -40px 0px;
 }
-
-/* ---------------------------------------------------------------------
-Carousel Button Sprites
---------------------------------------------------------------------- */
-.button__container {
-  float: right;
-  background-image: url("/assets/images/social-media.png");
-  background-repeat: no-repeat;
-  margin-top: 2px;
-  height: 27px;
-  width: 27px;
+.button--next:hover {
+  background-position: -40px -40px;
 }
-.button__container:hover {
-  background-position: -31px 0;
-}
-.button__container:active {
-  background-position: -31px 0;
+.button--next:active {
+  background-position: -40px -80px;
 }
 
 /* ---------------------------------------------------------------------

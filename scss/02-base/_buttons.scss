@@ -31,33 +31,3 @@ button {
     padding: 4px 8px;
     box-sizing: border-box;
 }
-
-/* player */
-.button--prev, .button--next {
-    position: absolute;
-    top: 45%;
-    padding: 4px;
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-    
-    &:hover {
-        color: #fff;
-        background-color: $background-color;
-        border: 1px solid $background-color;
-    }
-
-    &:active {
-        color: $brand-blue;
-        background-color: #fff;
-        border: 1px solid $background-color;
-    }
-}
-
-.button--prev {
-    left:0;
-}
-
-.button--next {
-    right:0;
-} 

@@ -1,19 +1,41 @@
 /* ---------------------------------------------------------------------
 Carousel Button Sprites
 --------------------------------------------------------------------- */
-.button__container {
-    float: right;
-    background-image: url("/assets/images/social-media.png");
-    background-repeat: no-repeat;
-    margin-top: 2px;
-    height: 27px;
-    width: 27px;
-    
+/* player */
+.button--prev, .button--next {
+    position: absolute;
+    background-image: url("/assets/images/button-next-prev.png");
+    top: 45%;
+    height: 40px;
+    width: 40px;
+}
+
+.button--prev {
+    left:0;
+    background-position: 0px 0px;
+
     &:hover {
-        background-position: -31px 0;  
+        background-position: 0px -40px;
+
     }
-    
+
     &:active {
-        background-position: -31px 0;  
+        background-position: 0px -80px;
+
     }
 }
+
+.button--next {
+    right:0;
+    background-position: -40px 0px;
+
+    &:hover {
+        background-position: -40px -40px;
+
+    }
+
+    &:active {
+        background-position: -40px -80px;
+
+    }
+} 
