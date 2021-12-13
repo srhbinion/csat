@@ -1,4 +1,4 @@
-Client Side Challenge
+Nerdery Client Side Challenge
 ========
 
 by: Sarah Binion
